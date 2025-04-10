@@ -1,7 +1,7 @@
 # Proyecto de Análisis de Donaciones de Chingu
 
 Este proyecto tiene como objetivo analizar la participación de los usuarios, los ingresos generados y los resultados de los proyectos colaborativos (Voyages) dentro de la plataforma **Chingu**.
-
+Add more
 ---
 
 ## Diccionario de Datos
