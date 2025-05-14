@@ -3,7 +3,23 @@
 Este proyecto tiene como objetivo analizar la participación de los usuarios, los ingresos generados y los resultados de los proyectos colaborativos (Voyages) dentro de la plataforma **Chingu**.
 Add more
 ---
+## Historia de Chingu.io
+Chingu.io es una comunidad global sin fines de lucro que empodera a desarrolladores en formación mediante el aprendizaje colaborativo, remoto y basado en proyectos.
 
+Fundada en 2017, la misión de Chingu es cerrar la brecha entre aprender a programar y trabajar de manera profesional, simulando entornos reales de desarrollo de software. Ofrece una oportunidad única para mejorar tanto las habilidades técnicas como las habilidades blandas trabajando en equipos distribuidos.
+
+El núcleo de Chingu es el Programa Voyage: un sprint estructurado de seis semanas en el que los participantes se agrupan según su nivel de habilidad e intereses. Los equipos colaboran para diseñar, desarrollar y desplegar aplicaciones reales, siguiendo metodologías Ágiles y buenas prácticas de desarrollo.
+
+Niveles del Voyage:
+Nivel 1: Proyectos introductorios utilizando HTML, CSS y JavaScript.
+
+Nivel 2: Aplicaciones front-end intermedias con frameworks como React.
+
+Nivel 3: Aplicaciones full-stack avanzadas con componentes integrados de front-end y back-end.
+
+Cada Voyage concluye con una exhibición pública donde los equipos presentan sus proyectos completados. Estas demostraciones muestran una amplia variedad de aplicaciones, desde herramientas de productividad hasta plataformas educativas.
+
+Chingu funciona gracias a su comunidad, y su sostenibilidad depende del apoyo y las donaciones de los participantes y colaboradores. Para obtener más información o contribuir, visita Chingu.io.
 ## Diccionario de Datos
 
 ### 1. `RedactedDonationAnalysis-Chingu_Applications_20250304.csv`
