@@ -645,6 +645,194 @@ Se utilizaron modelos Prophet para pronosticar:
 - `pad_sequence`, `DataLoader`, `BCEWithLogitsLoss`
 - `FRED API` para tasas económicas
 
+## Módulo `Cleaner.py`
+
+Este módulo define la clase `DataCleaner`, desarrollada para realizar limpieza, estandarización y transformación de datos de forma automática y estructurada. Es una herramienta fundamental dentro del proyecto de análisis de la plataforma Chingu.
+
+### Objetivos principales
+
+- Eliminar registros duplicados o erróneos
+- Normalizar columnas (fechas, texto, valores monetarios)
+- Preparar los datos para análisis estadísticos y modelos predictivos
+- Generar archivos limpios para uso directo en notebooks
+
+### Funcionalidades clave
+
+| Función | Descripción |
+|--------|-------------|
+| `describe_df()` | Muestra resumen general del DataFrame |
+| `clean_timestamps()` | Convierte automáticamente columnas de fecha a formato `datetime` |
+| `show_missing_values()` | Visualiza datos faltantes en forma numérica y gráfica |
+| `handle_missing_values(column, value)` | Rellena valores nulos con un valor personalizado |
+| `drop_column(columns)` | Elimina columnas específicas del conjunto de datos |
+| `standardize_categorical_data(columns)` | Limpia y estandariza textos categóricos como roles o países |
+| `remove_duplicates()` | Elimina registros repetidos por `Unique ID` |
+| `convert_numeric_columns()` | Convierte textos numéricos a valores float |
+| `convert_currency_column(columns)` | Limpia símbolos de moneda y convierte a número |
+| `save_cleaned_data(path)` | Exporta el conjunto limpio en formato CSV |
+| `standardize_column_names()` | Renombra columnas eliminando símbolos y espacios innecesarios |
+
+### Beneficios
+
+- Mejora la calidad y coherencia de los datos
+- Reduce el tiempo de preparación
+- Compatible con librerías de Machine Learning
+- Ideal para flujos de trabajo reproducibles
+
+### Dependencias
+
+- pandas  
+- numpy  
+- matplotlib  
+- seaborn  
+- plotly  
+- statsmodels  
+- re  
+- itertools
+
+> Esta clase actúa como base para los notebooks de análisis exploratorio y modelado del proyecto Chingu.
+## Módulo `Applications_Cleaner.py`
+
+Este módulo define la clase `DataCleaner_Application`, que hereda de `DataCleaner` y está diseñada para limpiar, transformar y categorizar datos de aplicaciones dentro de la plataforma Chingu.io.
+
+### Objetivos y Funcionalidades
+
+- Clasificar fuentes de referencia como Google, Reddit, GitHub, etc.  
+- Extraer atributos temporales (mes, semana, año) desde la fecha de aplicación  
+- Detectar participación en los programas Voyage  
+- Completar datos faltantes de país y código de país  
+- Expandir registros con múltiples Voyages  
+- Corregir inconsistencias en fechas, géneros y objetivos  
+- Vincular datos de aplicación con el calendario oficial de Voyages
+
+### Funciones Clave
+
+| Función | Descripción |
+|--------|-------------|
+| `extract_application_month()` | Extrae mes y semana desde `Application Date` |
+| `extract_application_date()` | Procesa la fecha del estado de suscripción |
+| `categorize_source()` | Clasifica texto libre de origen a categorías conocidas |
+| `apply_categorization()` | Aplica la clasificación de fuente al conjunto de datos |
+| `is_participated_in_voyage()` | Agrega columna binaria para participación en Voyage |
+| `standardize_sources()` | Unifica nombres de fuentes similares |
+| `update_country_and_country_code()` | Reconcilia país y código de país |
+| `explode_based_on_voyage_number()` | Divide filas múltiples por usuario con más de un Voyage |
+| `update_voyage_details()` | Relaciona datos con el calendario de Voyages |
+| `eleminate_inconsictencies()` | Corrige entradas atípicas o erróneas |
+| `update_gender()` | Agrupa géneros menos comunes bajo `other` |
+| `update_goal()` | Homogeneiza objetivos ambiguos |
+| `standardize_column_names()` | Convierte nombres de columnas al formato snake_case |
+
+### Dependencias
+
+- pandas  
+- numpy  
+- matplotlib  
+- seaborn  
+- plotly  
+- statsmodels  
+- re  
+- itertools
+
+> Esta clase es fundamental para preparar los datos de aplicación antes de realizar análisis exploratorios o modelado predictivo.
+
+## Módulo `Transaction_Cleaner.py`
+
+Este módulo contiene la clase `DataCleaner_Transactions`, una extensión de `DataCleaner` enfocada en la limpieza y transformación de datos financieros dentro de la plataforma Chingu.io.
+
+### Funciones Principales
+
+| Función | Descripción |
+|--------|-------------|
+| `extract_transaction_date()` | Extrae `año`, `mes` y `semana` desde `Transaction Date` |
+| `remove_rows_without_date()` | Elimina filas que no tienen fecha válida |
+| `manage_subscription_status()` | Normaliza el estado de suscripción a: `active`, `ended`, `no-subscription` |
+| `apply_subscription_status_cleaning()` | Aplica esta normalización sobre la columna entera |
+| `manage_currency_columns(amount)` | Elimina símbolos como `$` y convierte valores a `float` |
+| `apply_currency_update()` | Limpia columnas como `Net Payment`, `Payment Amount`, `Transaction Fee` |
+| `remove_high_missing_columns()` | Elimina columnas con muchos datos faltantes como `payee_name`, `notes` |
+| `standardize_column_names()` | Estandariza nombres de columnas a formato `snake_case` |
+
+### Aplicaciones
+
+- Análisis de ingresos por mes/semana
+- Modelos de predicción financiera
+- Evaluación del impacto de productos y campañas
+- Preparación de datos para modelos de Machine Learning
+
+### Dependencias
+
+- pandas, numpy  
+- matplotlib, seaborn, plotly  
+- itertools, re  
+- statsmodels.tsa.seasonal
+## Módulo `Completion_Cleaner.py`
+
+Este módulo contiene la clase `DataCleaner_completion`, especializada en la limpieza y transformación de los datos de finalización de proyectos (Voyage Completions) dentro de la plataforma **Chingu.io**. Hereda de la clase base `DataCleaner`.
+
+### Objetivos principales
+
+- Extraer el estado final del usuario desde cadenas con múltiples estados (ej.: `"active,inactive,complete"`)
+- Eliminar registros sin número de Voyage
+- Estandarizar la información de `Tier` de los participantes
+- Normalizar nombres de columnas para uso en análisis y modelado
+
+### Funciones Clave
+
+| Función | Descripción |
+|--------|-------------|
+| `manage_status(status)` | Retorna el último estado desde una cadena separada por comas |
+| `apply_status_management()` | Aplica esta limpieza sobre la columna `Status (from Voyage Signups Link)` |
+| `remove_rows_without_voyage_number()` | Elimina filas sin información de `Voyage` |
+| `update_tier(tier)` | Extrae sólo el nombre del Tier desde descripciones largas |
+| `apply_tier_update()` | Limpia la columna de `Tier` en todo el conjunto |
+| `standardize_column_names()` | Renombra las columnas en formato `snake_case` para compatibilidad |
+
+### Beneficios
+
+- Mejora la precisión al analizar la finalización de proyectos
+- Facilita la integración con otros datasets (como aplicaciones o transacciones)
+- Reduce errores por ambigüedad en los campos de estado
+
+### Dependencias
+
+- pandas  
+- numpy  
+- matplotlib, seaborn, plotly  
+- statsmodels  
+- re  
+- itertools
+
+## Módulo `EDA.py`
+
+Este módulo define la clase `EDA`, utilizada para realizar análisis exploratorios de datos (EDA) de manera automatizada y visual. Proporciona herramientas completas para visualizar la estructura y relaciones de los datos.
+
+### Funciones Principales
+
+| Función | Descripción |
+|--------|-------------|
+| `display_column_value_counts()` | Muestra los valores más frecuentes por columna |
+| `show_data_distribution()` | Genera gráficas estadísticas, incluyendo: |
+| &nbsp; • Pie Charts | Para columnas categóricas con pocas clases |
+| &nbsp; • Histogramas | Para columnas numéricas |
+| &nbsp; • Box Plots | Para detectar outliers |
+| &nbsp; • Violin Plots | Para ver la distribución y densidad |
+| &nbsp; • Scatter Plots | Relación entre variables numéricas |
+| &nbsp; • Scatter con línea de tendencia | Con ajuste lineal (`trendline=ols`) |
+| `show_seasonal_decomposition()` | Aplica descomposición estacional (modelo aditivo) a columnas numéricas |
+
+### Detalles Técnicos
+
+- Utiliza `pandas`, `plotly`, `matplotlib`, `seaborn`, `statsmodels`
+- Interpola y limpia automáticamente valores nulos e infinitos
+- Admite múltiples columnas numéricas en análisis secuencial
+
+### Beneficios
+
+- Permite conocer rápidamente la estructura y problemas del dataset
+- Útil como paso previo a cualquier modelo estadístico o de Machine Learning
+- Ideal para análisis descriptivo y visualización en dashboards
+
 
 ### README.md
 Documento principal del proyecto que describe su propósito, estructura y guía de uso.
