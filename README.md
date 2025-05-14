@@ -738,8 +738,4 @@ Para la exploración y modelado, se utilizó **Orange Data Mining**, que permite
 
 Se siguió la metodología **CRISP-DM**, que consta de:
 - Comprensión del negocio
-- Comprensión de los datos
-- Preparación de los datos
-- Modelado
-- Evaluación
-- Despliegue
+
