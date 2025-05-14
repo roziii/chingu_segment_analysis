@@ -189,7 +189,7 @@ El propósito de este notebook es realizar un análisis exploratorio de las apli
 Este notebook tiene como propósito analizar los datos de transacciones de la plataforma Chingu.io. Busca entender los patrones de ingresos, fuentes de pago y comportamientos temporales en las contribuciones recibidas.
 
 ##### Metodología Aplicada:
-*Preprocesamiento:
+* Preprocesamiento:
 
   * Limpieza de datos nulos y valores inválidos
 
@@ -407,13 +407,73 @@ El objetivo de este archivo es predecir si un usuario completará su proyecto Vo
 
 ###### Resultados principales
 ```
-Modelo	F1 Score	AUC
+Modelo	 F1 Score	AUC
 Logistic Regression	0.9063	0.9571
 Random Forest	0.9737	0.9977
 Logistic (Extra)	—	0.9681
 Random Forest (Extra)	—	0.9982
 ```
 
+##### Análisis enriquecido del archivo application_voyage_list_merge.ipynb (Español)
+###### Objetivo:
+Predecir la participación de usuarios en futuros Voyages de Chingu.io a partir de datos de aplicación, con visualización de tendencias, reducción de dimensiones, y modelos predictivos de alta precisión.
+
+###### Datos de entrada:
+* Número total de aplicaciones: 10,600
+
+* Variable objetivo: has_voyage (0 o 1)
+
+* Variables clave: rol, objetivo, género, origen, estado de suscripción
+
+###### Análisis exploratorio:
+* Día más activo: lunes y martes
+
+* Roles más comunes: Developer, Product Owner, Scrum Master
+
+* Objetivos frecuentes: encontrar equipo, mejorar CV, práctica colaborativa
+
+###### Tendencias temporales:
+* Pico de aplicaciones: años 2021 y 2022
+
+* Roles técnicos en aumento
+
+* Mayor cantidad de Voyages activos entre julio y noviembre
+
+###### Modelado predictivo:
+Modelo: Random Forest Classifier
+
+Evaluación:
+
+| Conjunto           | Precisión | F1 Score | AUC  |
+|--------------------|-----------|----------|------|
+| Entrenamiento/Test | 100%      | 1.00     | 1.00 |
+| Extrapolación      | 100%      | 1.00     | 1.00 |
+
+
+###### Reducción de dimensiones (PCA):
+Componentes seleccionados: 24 (cubren 95% de la varianza)
+
+Variables más influyentes:
+
+país de origen
+
+fuente de adquisición
+
+rol, objetivo, estado de suscripción
+
+###### Predicción de participación futura:
+Se generaron datos sintéticos para predecir participación mensual por rol hasta diciembre de 2025.
+
+Roles con mayor proyección: Developer, Product Owner
+
+Visualización combinada: datos reales + proyecciones futuras
+
+###### Evaluación del aprendizaje del modelo:
+Error dentro de la muestra (E_in): 0.0000
+
+Error fuera de muestra (E_out): 0.0005
+
+Estimación de PAC bound: ±0.0375
 
 
 ### README.md
