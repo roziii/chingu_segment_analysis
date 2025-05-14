@@ -475,6 +475,176 @@ Error fuera de muestra (E_out): 0.0005
 
 Estimación de PAC bound: ±0.0375
 
+##  Transaction & Application Combined Analysis
+
+Este análisis tiene como objetivo combinar datos de **aplicaciones**, **transacciones** y **finalización de proyectos** para predecir tanto la **suscripción activa de los usuarios** como el **pago neto esperado**.
+
+###  Datos combinados
+- Total de registros únicos: **2,287**
+- Datos fusionados desde:
+  - `applications.csv`
+  - `transactions.csv`
+  - `completions.csv`
+
+---
+
+###  Selección de Características (PCA)
+
+Se aplicó **Análisis de Componentes Principales (PCA)** a los tres conjuntos de datos para identificar variables más influyentes.
+
+- Principales atributos:
+  - `application_date`, `goal`, `source`, `product`, `tier`, `completion_status`, `net_payment`, `subscription_status`
+
+---
+
+###  Modelos de Clasificación
+
+Se entrenaron tres modelos para predecir el estado de suscripción (`Activa`, `Terminada`, `Sin suscripción`).
+
+| Modelo                | Accuracy | F1 Score | AUC     |
+|------------------------|----------|----------|---------|
+| Random Forest          | 94.48%   | 0.9431   | 0.9930  |
+| Gradient Boosting      | 95.57%   | 0.9551   | 0.9920  |
+| Logistic Regression    | 86.44%   | 0.8640   | 0.9559  |
+
+>  **Gradient Boosting** presentó el mejor rendimiento general.
+
+---
+
+###  Modelado de Regresión
+
+Se predijo el valor monetario `net_payment` usando modelos de regresión:
+
+- **Mejor modelo**: Gradient Boosting Regressor
+
+| Métrica       | Test Set | Extrapolación |
+|---------------|----------|---------------|
+| MAE           | 0.44     | 0.50          |
+| R² Score      | 0.83     | 0.75          |
+
+---
+
+###  Archivos relacionados
+
+- `Transaction_Application_analysis.ipynb`: análisis completo
+- `merged_dataset.csv`: conjunto de datos final usado para modelado
+
+##  Application_table_normalization.ipynb
+
+Este módulo realiza la **normalización de columnas clave** del dataset de aplicaciones para reducir redundancias, mejorar la estructura y preparar los datos para análisis avanzados y modelado predictivo.
+
+###  Proceso de Normalización
+
+Se utilizó una clase personalizada `Application_Normalizer` para:
+
+1. Leer los datos originales desde `applications.csv`
+2. Crear tablas de dimensión para los siguientes campos:
+   - `unique_id`
+   - `subscription_status`
+   - `voyage_role`
+   - `gender`
+   - `goal`
+   - `source`
+   - `country_name_from_country`
+   - `application_day_of_week`
+3. Reemplazar los valores originales por claves foráneas (IDs)
+4. Exportar tanto la versión normalizada como la versión reconstruida
+
+### Archivos Generados
+
+| Archivo                                | Descripción                                          |
+|----------------------------------------|------------------------------------------------------|
+| `clean_applications.csv`              | Aplicaciones con claves foráneas (formato limpio)   |
+| `*_table.csv`                         | Tablas de dimensión por columna (ej. `goal_table.csv`) |
+| `merged_applications.csv`             | Aplicaciones reconstruidas con los valores originales |
+
+>  Todos los archivos se encuentran en: `./data/normalized_data/`
+
+###  Ventajas
+
+- Menor redundancia de texto
+- Mejor organización de datos
+- Listo para bases de datos relacionales o entrenamiento de modelos ML
+
+## application_completion-auto_regressive_model
+Modelado Autoregresivo para Completitud de Voyage
+
+Este módulo implementa un modelo autoregresivo basado en LSTM para predecir si un usuario completará su participación en un Voyage de Chingu.io, usando datos secuenciales históricos y enriquecimiento externo como tasa de desempleo y tendencias de búsqueda de Google.
+
+---
+
+### Datos y Preprocesamiento
+
+- Total de registros: **7,929 aplicaciones únicas**
+- Campos clave: `voyage_role`, `subscription_status`, `goal`, `product`, `completion_status`, `timestamp`, etc.
+- Normalización:
+  - BinaryEncoding aplicado a variables categóricas
+  - Columnas como `completed_voyage` y `has_valid_voyage` convertidas a binario
+
+---
+
+### Modelos Secuenciales LSTM
+
+Se construyeron dos modelos:
+
+#### 1. **Predicción de `completed_voyage`**
+- Datos secuenciales por `unique_id` y `timestamp`
+- Modelo: `LSTMClassifier` (PyTorch)
+- Exactitud de prueba (`Test Accuracy`): **99.38%**
+- Visualización de predicciones secuenciales por usuario
+- Manejo robusto de secuencias de longitud variable
+
+#### 2. **Predicción de `has_valid_voyage`**
+- Modelo similar con secuencias por `application_date`
+- Exactitud en prueba: **99.88%**
+
+---
+
+### Pronósticos con Prophet
+
+Se utilizaron modelos Prophet para pronosticar:
+
+#### 1. **Completitud de Voyage mensual**
+- Entrenado con datos de completitud mensual desde 2021
+- Proyección de próximos **12 meses**
+- Gráficos de tendencias, estacionalidad anual y efecto de días festivos
+
+#### 2. **Envíos de Aplicaciones**
+- Pronóstico diario basado en fechas de aplicación
+- Gráfica de predicción vs. Tasa de desempleo (U.S.)
+
+---
+
+### Enriquecimiento Externo
+
+- Se integró la **tasa de desempleo de EE.UU.** (`UNRATE`) desde FRED
+- Se integraron datos de **Google Trends** para búsquedas de:
+  - `Web Developer Job`
+  - `Scrum Master`
+  - `Product Owner`
+
+> Comparaciones gráficas muestran correlación entre volumen de aplicaciones y popularidad de roles técnicos en el mercado laboral.
+
+---
+
+### Archivos Relacionados
+
+| Archivo | Descripción |
+|--------|-------------|
+| `applications.csv` | Datos limpios de aplicación |
+| `completions.csv`  | Estados de completitud |
+| `application_completion-auto_regressive_model.ipynb` | Código completo del análisis |
+| `multiTimeline_*.csv` | Tendencias de búsqueda Google para cada rol |
+
+---
+
+### Tecnologías Utilizadas
+
+- `PyTorch`, `Prophet`, `pandas`, `matplotlib`
+- `BinaryEncoder` para codificación
+- `pad_sequence`, `DataLoader`, `BCEWithLogitsLoss`
+- `FRED API` para tasas económicas
+
 
 ### README.md
 Documento principal del proyecto que describe su propósito, estructura y guía de uso.
