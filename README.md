@@ -75,6 +75,60 @@ Subcarpetas:
 #### cleaned_data/: Datos depurados y listos para su análisis.
 
 ##### normalized_data/: Datos normalizados para su uso en modelos.
+## Diccionario de Datos
+### 1. `RedactedDonationAnalysis-Chingu_Applications_20250304.csv`
+
+**Propósito**: Registra la información de los usuarios que se inscriben para participar en un Voyage de Chingu.
+
+**Columnas Clave**:
+- `Unique ID`: Identificador único anonimizado.
+- `Timestamp`: Fecha y hora del registro.
+- `Subscription Status`: Estado de suscripción al correo electrónico (no paga).
+- `Voyage Role`: Rol al que aspira el solicitante.
+- `Goal`, `Source`: Motivaciones y canal de descubrimiento.
+- `Application Date`, `Application Age in Days`, `No. Voyages Started`, `Country`: Contexto del usuario.
+
+---
+
+### 2. `RedactedDonationAnalysis-Chingu_RevenueTxns_20250305.csv`
+
+**Propósito**: Detalla todas las transacciones financieras de los usuarios, incluyendo suscripciones pagas y donaciones.
+
+**Columnas Clave**:
+- `Unique ID`: Identificador del usuario.
+- `Subscription Status`: Indica si tiene suscripción **paga**.
+- `Transaction Date`: Fecha de la transacción.
+- `Payment Amount`, `Net Payment`, `Transaction Fee`: Detalles del monto.
+- `Product`, `Payment Source`, `Certificate Voyage`: Información contextual del pago.
+
+> **Nota**: Aquí, “Subscription Status” se refiere exclusivamente a **suscripciones pagas**.
+
+---
+
+### 3. `DonationAnalysis-Chingu_VoyageSchedules_20250305.csv`
+
+**Propósito**: Define el calendario de cada Voyage.
+
+**Columnas Clave**:
+- `Name`: Código del Voyage.
+- `Start Date`, `End Date`, `Solo Project Deadline`: Duración y fechas clave.
+- `Description`: Observaciones adicionales.
+
+---
+
+### 4. `RedactedDonationAnalysis-Chingu_VoyageCompletions_20250305.csv`
+
+**Propósito**: Registra la participación de los usuarios en proyectos grupales, su finalización y retroalimentación.
+
+**Columnas Clave**:
+- `Unique ID`, `What is your Voyage?`, `Completed Voyage?`, `Completion Status`
+- `Certificate Issue Date`, `Tier`, `Team number`, `Project name`
+- `Tech stack`, `GitHub URL`, `Deployed URL`
+- Comentarios sobre la experiencia y recomendación
+
+---
+
+
 
 ### modules/
 Este directorio contiene scripts Python reutilizables que encapsulan la lógica de procesamiento y análisis. Incluye:
@@ -837,59 +891,6 @@ Este módulo define la clase `EDA`, utilizada para realizar análisis explorator
 ### README.md
 Documento principal del proyecto que describe su propósito, estructura y guía de uso.
 
-## Diccionario de Datos
-### 1. `RedactedDonationAnalysis-Chingu_Applications_20250304.csv`
-
-**Propósito**: Registra la información de los usuarios que se inscriben para participar en un Voyage de Chingu.
-
-**Columnas Clave**:
-- `Unique ID`: Identificador único anonimizado.
-- `Timestamp`: Fecha y hora del registro.
-- `Subscription Status`: Estado de suscripción al correo electrónico (no paga).
-- `Voyage Role`: Rol al que aspira el solicitante.
-- `Goal`, `Source`: Motivaciones y canal de descubrimiento.
-- `Application Date`, `Application Age in Days`, `No. Voyages Started`, `Country`: Contexto del usuario.
-
----
-
-### 2. `RedactedDonationAnalysis-Chingu_RevenueTxns_20250305.csv`
-
-**Propósito**: Detalla todas las transacciones financieras de los usuarios, incluyendo suscripciones pagas y donaciones.
-
-**Columnas Clave**:
-- `Unique ID`: Identificador del usuario.
-- `Subscription Status`: Indica si tiene suscripción **paga**.
-- `Transaction Date`: Fecha de la transacción.
-- `Payment Amount`, `Net Payment`, `Transaction Fee`: Detalles del monto.
-- `Product`, `Payment Source`, `Certificate Voyage`: Información contextual del pago.
-
-> **Nota**: Aquí, “Subscription Status” se refiere exclusivamente a **suscripciones pagas**.
-
----
-
-### 3. `DonationAnalysis-Chingu_VoyageSchedules_20250305.csv`
-
-**Propósito**: Define el calendario de cada Voyage.
-
-**Columnas Clave**:
-- `Name`: Código del Voyage.
-- `Start Date`, `End Date`, `Solo Project Deadline`: Duración y fechas clave.
-- `Description`: Observaciones adicionales.
-
----
-
-### 4. `RedactedDonationAnalysis-Chingu_VoyageCompletions_20250305.csv`
-
-**Propósito**: Registra la participación de los usuarios en proyectos grupales, su finalización y retroalimentación.
-
-**Columnas Clave**:
-- `Unique ID`, `What is your Voyage?`, `Completed Voyage?`, `Completion Status`
-- `Certificate Issue Date`, `Tier`, `Team number`, `Project name`
-- `Tech stack`, `GitHub URL`, `Deployed URL`
-- Comentarios sobre la experiencia y recomendación
-
----
-
 
 ## Entorno Técnico y Herramientas
 
@@ -918,12 +919,151 @@ Se configuró un clúster de respaldo distribuido con:
 
 Permite replicación y redundancia de datos clave del proyecto.
 
-### 5. Minería de Datos con Orange
+### 5. BIGQuery
+##  Análisis con Google BigQuery
 
-Para la exploración y modelado, se utilizó **Orange Data Mining**, que permite flujos de trabajo visuales intuitivos para análisis exploratorio y predictivo.
+Se utilizó Google BigQuery como motor de análisis para unir las principales fuentes de datos de la plataforma Chingu (`applications`, `transactions`, `completions`) y ejecutar consultas SQL escalables y eficientes.
 
-### 6. Metodología de Ciencia de Datos
+###  Objetivos Principales
+
+1. Comprender la distribución de usuarios por estado de suscripción  
+2. Evaluar qué productos generan más ingresos o transacciones  
+3. Calcular la tasa de finalización de proyectos según el rol en el Voyage  
+4. Analizar los niveles de satisfacción a través del NPS (Net Promoter Score)
+
+![image](https://github.com/user-attachments/assets/8b388d38-8c85-433d-b2a1-d38b2b1ff6c2)
+* Recuento de usuarios por estado de suscripción
+![image](https://github.com/user-attachments/assets/145578e2-11dd-4e80-acd0-06595e9f5695)
+![image](https://github.com/user-attachments/assets/f6c291e3-6f6d-4972-8081-92763d05de58)
+* Pago neto promedio por producto
+![image](https://github.com/user-attachments/assets/7bee5f78-6d34-424f-9eb0-a295f52b75b5)
+![image](https://github.com/user-attachments/assets/10d5b8c5-91e0-47cb-b912-e9283af6a3c2)
+* Completion Rate by Voyage Role
+![image](https://github.com/user-attachments/assets/8b29dbd7-8416-4537-8137-d2e11bba3572)
+![image](https://github.com/user-attachments/assets/072e2024-345c-42df-91aa-b9f20ecbfd7b)
+* Distribución de puntuaciones del NPS
+![image](https://github.com/user-attachments/assets/50786f05-c71c-415d-9a01-120eca326169)
+![image](https://github.com/user-attachments/assets/6d3cda07-014e-40b0-b69f-ed341662a894)
+)
+
+
+
+
+
+## 6. Dashboard Analítico de Chingu
+
+Este dashboard fue diseñado para proporcionar una visión integral y dinámica de los datos de la plataforma Chingu, permitiendo analizar interactivamente la actividad de los usuarios, ingresos y participación en los proyectos.
+
+### Herramientas Utilizadas
+
+- Power BI 
+- Datos procesados desde:
+  - `applications.csv`
+  - `transactions.csv`
+  - `completions.csv`
+  - `voyage_schedule.csv`
+
+### Secciones del Dashboard
+
+| Sección | Descripción |
+|--------|-------------|
+| **Análisis de Aplicaciones** | Métricas de usuarios, objetivos y fuentes de registro |
+| **Ingresos y Transacciones** | Monto de pagos, productos y estado de suscripción |
+| **Participación en Voyages** | Distribución de roles, estado de finalización y certificados |
+| **Tendencias Temporales** | Análisis por hora, día, mes y año |
+| **Análisis Geográfico** | Mapa de calor según país de origen de los usuarios |
+| **Filtros Interactivos** | Por rol, género, suscripción, producto, país, entre otros |
+
+![image](https://github.com/user-attachments/assets/f515497b-9ea5-47f6-ba35-17b16e6ec787)
+![image](https://github.com/user-attachments/assets/98722acc-36a8-445c-85da-af2d5289ff5e)
+![image](https://github.com/user-attachments/assets/f12ce49d-4e54-466d-acd6-6467aa6871a5)
+![image](https://github.com/user-attachments/assets/0fdb6416-df8e-424f-a8a8-528050a88072)
+![image](https://github.com/user-attachments/assets/16116ec0-ba6d-412b-948b-f309203b2907)
+![image](https://github.com/user-attachments/assets/0e5927bb-b29e-4ca4-aa21-50dd55ec4a75).
+
+
+
+
+
+### Aplicaciones
+
+- Informes estratégicos para equipos de producto y marketing
+- Análisis de conversión de aplicación a finalización
+- Medición del impacto de campañas de adquisición
+- Toma de decisiones basada en datos para crecimiento de la plataforma
+
+
+
+### 7. Minería de Datos con Orange
+
+##  Análisis con Orange Data Mining
+
+Se utilizaron flujos de trabajo en **Orange Data Mining** para realizar análisis exploratorios, aprendizaje automático y evaluación de modelos de manera visual e interactiva.
+
+---
+
+###  Carga y Preprocesamiento de Datos
+
+- **File / Data Table**: Lectura del archivo CSV y visualización inicial de los datos.
+- **Preprocess**: Limpieza y transformación de datos incluyendo manejo de valores faltantes, normalización, codificación categórica y discretización.
+
+---
+
+###  Visualización de Datos
+
+- **Heat Map**, **Bar Plot**, **Violin Plot**, **Scatter Plot**, **Line Plot**: Se aplicaron para identificar relaciones, correlaciones y distribución de variables clave.
+- **Feature Statistics**: Análisis estadístico básico por atributo.
+
+---
+
+###  Análisis Predictivo
+
+#### Clasificación
+
+- **Modelos utilizados**:
+  - Árbol de Decisión (Tree)
+  - k-NN (k Nearest Neighbors)
+  - Regresión Logística
+  - Random Forest
+
+- **Evaluación**:
+  - **Test and Score**: Cálculo de precisión, recall, F1 y AUC
+  - **Confusion Matrix**: Visualización del desempeño del modelo
+  - **ROC Analysis**: Curva ROC para comparar modelos
+  - **Rank**: Comparación entre algoritmos
+
+#### Reducción de Dimensiones
+
+- **PCA**: Reducción de dimensiones para visualización y preparación de entrada a modelos.
+
+#### Clustering
+
+- **k-Means**: Agrupamiento no supervisado para identificar segmentos de usuarios.
+
+---
+
+###  Resultados Clave
+
+- Se identificaron modelos con alta precisión en la predicción de comportamiento de usuarios (ej. regresión logística con alta AUC).
+- Visualizaciones revelaron correlaciones entre atributos como rol, país y resultados de finalización.
+- El uso de Orange permitió una exploración rápida y visual sin necesidad de codificación manual.
+
+---
+![image](https://github.com/user-attachments/assets/a68cbd73-bb55-4e2a-b56b-8ec29d04c288)
+**
+###  Herramientas Utilizadas
+
+- Orange Data Mining 3.x
+- Widgets: File, Preprocess, Tree, kNN, Logistic Regression, PCA, Test and Score, Confusion Matrix, ROC, Rank, Scatter Plot, etc.
+
+---
+
+> Este flujo visual facilitó la validación de hipótesis rápidamente y ayudó a complementar los análisis hechos con Python y BigQuery.
+
+### 8. Metodología de Ciencia de Datos
 
 Se siguió la metodología **CRISP-DM**, que consta de:
 - Comprensión del negocio
+
+
 
