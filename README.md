@@ -572,12 +572,8 @@ fuente de adquisición
 
 rol, objetivo, estado de suscripción
 
-###### Predicción de participación futura:
-Se generaron datos sintéticos para predecir participación mensual por rol hasta diciembre de 2025.
+![image](https://github.com/user-attachments/assets/2432c9e2-8f46-44f0-b88f-f68d90ef3846)
 
-Roles con mayor proyección: Developer, Product Owner
-
-Visualización combinada: datos reales + proyecciones futuras
 
 ###### Evaluación del aprendizaje del modelo:
 Error dentro de la muestra (E_in): 0.0000
@@ -605,10 +601,15 @@ Se aplicó **Análisis de Componentes Principales (PCA)** a los tres conjuntos d
 
 - Principales atributos:
   - `application_date`, `goal`, `source`, `product`, `tier`, `completion_status`, `net_payment`, `subscription_status`
+![image](https://github.com/user-attachments/assets/b7cfb385-3507-4137-ba88-1d54985bef6c)
+![image](https://github.com/user-attachments/assets/4f69c4b3-3888-427c-9d21-0727520dcfba)
+![image](https://github.com/user-attachments/assets/d09e5c96-43d6-4425-aa29-e2816544754b)
+![image](https://github.com/user-attachments/assets/d4ca2a92-a57c-4885-bf9c-a823babd3762)
+![image](https://github.com/user-attachments/assets/0de3d2a0-e733-4953-b800-5520443d6b7d)
 
 ---
 
-###  Modelos de Clasificación
+###  Modelos de Clasificación(subscription_status_Transactions)
 
 Se entrenaron tres modelos para predecir el estado de suscripción (`Activa`, `Terminada`, `Sin suscripción`).
 
@@ -619,6 +620,18 @@ Se entrenaron tres modelos para predecir el estado de suscripción (`Activa`, `T
 | Logistic Regression    | 86.44%   | 0.8640   | 0.9559  |
 
 >  **Gradient Boosting** presentó el mejor rendimiento general.
+![image](https://github.com/user-attachments/assets/ff040e48-012a-4623-9af5-f40fbabbbd26)
+![image](https://github.com/user-attachments/assets/54154706-d6bb-4023-8a7d-dde2bb8d94ee)
+![image](https://github.com/user-attachments/assets/4b172062-4b98-4806-9e32-0ef34e8460e7)
+![image](https://github.com/user-attachments/assets/64b14e1a-b384-4174-a0fd-9a813bae93f7)
+![image](https://github.com/user-attachments/assets/b6678d55-01ef-4045-9729-9b7817d1c538)
+![image](https://github.com/user-attachments/assets/011bea23-f075-418e-a6f3-22ff92a51884)
+![image](https://github.com/user-attachments/assets/8d040d3f-87a9-4d32-bebb-37c6272f68e2)
+![image](https://github.com/user-attachments/assets/1b256d9a-c9dd-4c4f-a3d4-e49e65116a07)
+![image](https://github.com/user-attachments/assets/a60b5ec1-4469-488c-a0bc-968d4109571d)
+![image](https://github.com/user-attachments/assets/c07952b5-ef8c-48be-a25c-0144a6536dba)
+![image](https://github.com/user-attachments/assets/e4dc121a-f2c6-48ae-adfd-879231dbd1f9)
+![image](https://github.com/user-attachments/assets/568283d1-3b88-4aa8-947e-68c7fb40cfa9)
 
 ---
 
@@ -632,6 +645,9 @@ Se predijo el valor monetario `net_payment` usando modelos de regresión:
 |---------------|----------|---------------|
 | MAE           | 0.44     | 0.50          |
 | R² Score      | 0.83     | 0.75          |
+
+![image](https://github.com/user-attachments/assets/26003fe1-ab94-4374-8269-58851e1de914)
+![image](https://github.com/user-attachments/assets/7c1fccf1-80dd-4c16-8897-141e0c1a6489)
 
 ---
 
@@ -704,6 +720,7 @@ Se construyeron dos modelos:
 - Exactitud de prueba (`Test Accuracy`): **99.38%**
 - Visualización de predicciones secuenciales por usuario
 - Manejo robusto de secuencias de longitud variable
+![image](https://github.com/user-attachments/assets/9c298acd-c0e8-41c9-86ef-ecf86cfea462)
 
 #### 2. **Predicción de `has_valid_voyage`**
 - Modelo similar con secuencias por `application_date`
@@ -723,6 +740,7 @@ Se utilizaron modelos Prophet para pronosticar:
 #### 2. **Envíos de Aplicaciones**
 - Pronóstico diario basado en fechas de aplicación
 - Gráfica de predicción vs. Tasa de desempleo (U.S.)
+![image](https://github.com/user-attachments/assets/5567bed8-86bf-46c4-95e4-fcffe6c05fa0)
 
 ---
 
@@ -735,6 +753,11 @@ Se utilizaron modelos Prophet para pronosticar:
   - `Product Owner`
 
 > Comparaciones gráficas muestran correlación entre volumen de aplicaciones y popularidad de roles técnicos en el mercado laboral.
+![image](https://github.com/user-attachments/assets/319c2474-c741-4360-8419-6e9e52392569)
+![image](https://github.com/user-attachments/assets/cac0f60f-8012-4831-ae1d-6282f47e969e)
+![image](https://github.com/user-attachments/assets/972e8dca-e76c-4f39-982b-757f1fe434b2)
+![image](https://github.com/user-attachments/assets/d2f85dc7-2e0c-4ee3-82b6-98846443ae62)
+![image](https://github.com/user-attachments/assets/f66da9b7-b614-40e8-8ee2-2cea962cdb9e)
 
 ---
 
