@@ -64,6 +64,11 @@ Voluntariado: Participa como mentor, facilitador o colaborador en la comunidad.
 
 ## Estructura del Proyecto
 El proyecto está organizado de manera modular para facilitar el análisis, limpieza, modelado y visualización de los datos relacionados con la plataforma Chingu.io. A continuación se describe la estructura principal:
+###  Gestión del Proyecto – Tablero de Progreso
+
+El desarrollo del proyecto se organiza mediante un tablero de seguimiento visual en GitHub, dividido en diferentes columnas que representan el estado de cada tarea. Esta estructura permite mantener una visión clara del avance y facilita la colaboración entre miembros del equipo.
+
+![image](https://github.com/user-attachments/assets/adce4931-1227-4d62-bfe5-2b5e02dbd2a9)
 
 ### data/
 Contiene los archivos de datos utilizados en el análisis. Incluye:
