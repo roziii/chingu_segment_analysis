@@ -216,7 +216,10 @@ El propósito de este notebook es realizar un análisis exploratorio de las apli
     ![Image](https://github.com/user-attachments/assets/76c925c9-4b3d-4d56-9744-e856fc81122e)
     ![Image](https://github.com/user-attachments/assets/a655c81c-c450-4f96-b116-c9f13532eaa7)
     ![Image](https://github.com/user-attachments/assets/a7b714f7-200c-476b-a766-7b13d5f999df)
- 
+    ![image](https://github.com/user-attachments/assets/02ee7013-3c91-4763-a399-5fdbd0955542)
+    ![image](https://github.com/user-attachments/assets/79ab20f4-05dd-4b05-bbcb-8a0dd144f713)
+    ![image](https://github.com/user-attachments/assets/712c14f4-3d34-4715-a693-94428ebae354)
+    ![image](https://github.com/user-attachments/assets/1a889c86-c0e5-4ae1-954c-068c06da81c4)
 
 
 * Métodos Matemáticos Aplicados
@@ -262,6 +265,17 @@ Este notebook tiene como propósito analizar los datos de transacciones de la pl
   * Exploración de columnas clave usando histogramas y gráficos de barras
 
   * Análisis por año, mes y semana de transacción
+    
+   ![image](https://github.com/user-attachments/assets/e96e0183-f8fb-4ddf-950f-55e3b48f8ad5)
+
+   ![image](https://github.com/user-attachments/assets/ce0d6c8e-8988-4b18-9ebf-b22e4bd9b9c3)
+  
+  ![image](https://github.com/user-attachments/assets/b29b2d73-7d49-4f6d-84ae-a87bd11810ae)
+  
+  ![image](https://github.com/user-attachments/assets/473fe54e-c689-415a-95ba-c64f4451d28b)
+
+  ![image](https://github.com/user-attachments/assets/64a7a06d-c657-4c55-95d5-a3ee7b358da8)
+
 
 * Descomposición Estacional:
 
@@ -324,6 +338,12 @@ El propósito de este notebook es analizar los datos relacionados con la finaliz
 * Análisis de puntuación en escalas (de 0 a 10)
 
 * Procesamiento de fechas para posibles análisis temporales
+![image](https://github.com/user-attachments/assets/368cc8fa-e6c7-4380-9a08-e7ec706dc9cd)
+![image](https://github.com/user-attachments/assets/cb9654fe-bf3d-48cb-8c5e-5856f04e1814)
+![image](https://github.com/user-attachments/assets/aa31b6dd-5829-4b7a-8153-cff448576295)
+
+
+
 
 ###### Resultados
 * Exportación de dataset limpio en CSV
@@ -376,6 +396,15 @@ Analizar los datos de transacciones financieras de los usuarios de Chingu.io par
   * Clasificación binaria con regresión logística para predecir pagos altos
 
   * Evaluación del modelo con métricas: Accuracy, Precision, Recall, F1, AUC
+ 
+  ![image](https://github.com/user-attachments/assets/3445a0d8-ddaf-4543-a2a1-343fbad865bd)
+  ![image](https://github.com/user-attachments/assets/019500de-d02d-465d-876c-d6e8091422b6)
+  ![image](https://github.com/user-attachments/assets/10c56f27-fa07-4d1b-b3ff-a89888765be9)
+  ![image](https://github.com/user-attachments/assets/b61c0c5d-fe1f-437e-8636-e0099b993921)
+  ![image](https://github.com/user-attachments/assets/20a4de76-453b-46ce-bd5b-a78017f30375)
+  ![image](https://github.com/user-attachments/assets/dad29ac5-3a87-4005-a891-2f026164bec0)
+  ![image](https://github.com/user-attachments/assets/9ee279e0-40a7-4de4-a523-173acd4ae4e0)
+
 
 ###### Técnicas Matemáticas y de Machine Learning
 * Estadísticas descriptivas
@@ -467,10 +496,23 @@ Random Forest	0.9737	0.9977
 Logistic (Extra)	—	0.9681
 Random Forest (Extra)	—	0.9982
 ```
+#### voyage_completion 
+![image](https://github.com/user-attachments/assets/bf6b7c11-5eb0-4c3b-8ab9-ed6f746c8980)
+![image](https://github.com/user-attachments/assets/c3b14cf8-9475-4934-8e4f-af1133c8abd5)
+![image](https://github.com/user-attachments/assets/3821b8ac-1d33-400e-8277-c5a618b80d42)
+![image](https://github.com/user-attachments/assets/4ae02678-1d96-4922-9f2e-57ccfdc7826d)
+![image](https://github.com/user-attachments/assets/015ed4c3-74c7-422f-9b3b-86653d0f3af9)
+![image](https://github.com/user-attachments/assets/4c0d4c26-250a-48e4-95fd-993469cb26b6)
+![image](https://github.com/user-attachments/assets/862c8395-3ba9-4d7b-9ffc-334fad6d9422)
+
+
+
 
 ##### Análisis enriquecido del archivo application_voyage_list_merge.ipynb (Español)
 ###### Objetivo:
 Predecir la participación de usuarios en futuros Voyages de Chingu.io a partir de datos de aplicación, con visualización de tendencias, reducción de dimensiones, y modelos predictivos de alta precisión.
+
+
 
 ###### Datos de entrada:
 * Número total de aplicaciones: 10,600
@@ -478,6 +520,17 @@ Predecir la participación de usuarios en futuros Voyages de Chingu.io a partir 
 * Variable objetivo: has_voyage (0 o 1)
 
 * Variables clave: rol, objetivo, género, origen, estado de suscripción
+![image](https://github.com/user-attachments/assets/5f2a343c-6949-45ba-a49b-82748e1666c4)
+![image](https://github.com/user-attachments/assets/e8fc88a6-9c8a-4930-a55b-bfb9b4b48f10)
+![image](https://github.com/user-attachments/assets/afd0ddf0-1269-4921-8bc3-98b57decc643)
+![image](https://github.com/user-attachments/assets/c2555ff0-4582-48ac-b312-335103335e87)
+![image](https://github.com/user-attachments/assets/eb93083b-b014-4c81-9322-ca60e9c66841)
+![image](https://github.com/user-attachments/assets/35018996-b841-40cf-b1b8-fd4f0d0de8e1)
+![image](https://github.com/user-attachments/assets/e29023cd-f28a-48a8-a082-51ef9aad878c)
+
+
+
+
 
 ###### Análisis exploratorio:
 * Día más activo: lunes y martes
@@ -494,7 +547,7 @@ Predecir la participación de usuarios en futuros Voyages de Chingu.io a partir 
 * Mayor cantidad de Voyages activos entre julio y noviembre
 
 ###### Modelado predictivo:
-Modelo: Random Forest Classifier
+Modelo: Random Forest Classifier (has_voyage)
 
 Evaluación:
 
@@ -502,6 +555,10 @@ Evaluación:
 |--------------------|-----------|----------|------|
 | Entrenamiento/Test | 100%      | 1.00     | 1.00 |
 | Extrapolación      | 100%      | 1.00     | 1.00 |
+![image](https://github.com/user-attachments/assets/54626c27-b071-40ae-9caf-e46318626cd5)
+![image](https://github.com/user-attachments/assets/38d650f7-3be8-4ec2-8166-a6414326dc36)
+![image](https://github.com/user-attachments/assets/287cebbc-d58b-4974-9e43-2fbc84454fd5)
+![image](https://github.com/user-attachments/assets/6558f1a5-4f95-472c-b2ac-e6a3912f5ca8)
 
 
 ###### Reducción de dimensiones (PCA):
@@ -515,12 +572,8 @@ fuente de adquisición
 
 rol, objetivo, estado de suscripción
 
-###### Predicción de participación futura:
-Se generaron datos sintéticos para predecir participación mensual por rol hasta diciembre de 2025.
+![image](https://github.com/user-attachments/assets/2432c9e2-8f46-44f0-b88f-f68d90ef3846)
 
-Roles con mayor proyección: Developer, Product Owner
-
-Visualización combinada: datos reales + proyecciones futuras
 
 ###### Evaluación del aprendizaje del modelo:
 Error dentro de la muestra (E_in): 0.0000
@@ -548,10 +601,15 @@ Se aplicó **Análisis de Componentes Principales (PCA)** a los tres conjuntos d
 
 - Principales atributos:
   - `application_date`, `goal`, `source`, `product`, `tier`, `completion_status`, `net_payment`, `subscription_status`
+![image](https://github.com/user-attachments/assets/b7cfb385-3507-4137-ba88-1d54985bef6c)
+![image](https://github.com/user-attachments/assets/4f69c4b3-3888-427c-9d21-0727520dcfba)
+![image](https://github.com/user-attachments/assets/d09e5c96-43d6-4425-aa29-e2816544754b)
+![image](https://github.com/user-attachments/assets/d4ca2a92-a57c-4885-bf9c-a823babd3762)
+![image](https://github.com/user-attachments/assets/0de3d2a0-e733-4953-b800-5520443d6b7d)
 
 ---
 
-###  Modelos de Clasificación
+###  Modelos de Clasificación(subscription_status_Transactions)
 
 Se entrenaron tres modelos para predecir el estado de suscripción (`Activa`, `Terminada`, `Sin suscripción`).
 
@@ -562,6 +620,18 @@ Se entrenaron tres modelos para predecir el estado de suscripción (`Activa`, `T
 | Logistic Regression    | 86.44%   | 0.8640   | 0.9559  |
 
 >  **Gradient Boosting** presentó el mejor rendimiento general.
+![image](https://github.com/user-attachments/assets/ff040e48-012a-4623-9af5-f40fbabbbd26)
+![image](https://github.com/user-attachments/assets/54154706-d6bb-4023-8a7d-dde2bb8d94ee)
+![image](https://github.com/user-attachments/assets/4b172062-4b98-4806-9e32-0ef34e8460e7)
+![image](https://github.com/user-attachments/assets/64b14e1a-b384-4174-a0fd-9a813bae93f7)
+![image](https://github.com/user-attachments/assets/b6678d55-01ef-4045-9729-9b7817d1c538)
+![image](https://github.com/user-attachments/assets/011bea23-f075-418e-a6f3-22ff92a51884)
+![image](https://github.com/user-attachments/assets/8d040d3f-87a9-4d32-bebb-37c6272f68e2)
+![image](https://github.com/user-attachments/assets/1b256d9a-c9dd-4c4f-a3d4-e49e65116a07)
+![image](https://github.com/user-attachments/assets/a60b5ec1-4469-488c-a0bc-968d4109571d)
+![image](https://github.com/user-attachments/assets/c07952b5-ef8c-48be-a25c-0144a6536dba)
+![image](https://github.com/user-attachments/assets/e4dc121a-f2c6-48ae-adfd-879231dbd1f9)
+![image](https://github.com/user-attachments/assets/568283d1-3b88-4aa8-947e-68c7fb40cfa9)
 
 ---
 
@@ -575,6 +645,9 @@ Se predijo el valor monetario `net_payment` usando modelos de regresión:
 |---------------|----------|---------------|
 | MAE           | 0.44     | 0.50          |
 | R² Score      | 0.83     | 0.75          |
+
+![image](https://github.com/user-attachments/assets/26003fe1-ab94-4374-8269-58851e1de914)
+![image](https://github.com/user-attachments/assets/7c1fccf1-80dd-4c16-8897-141e0c1a6489)
 
 ---
 
@@ -647,6 +720,7 @@ Se construyeron dos modelos:
 - Exactitud de prueba (`Test Accuracy`): **99.38%**
 - Visualización de predicciones secuenciales por usuario
 - Manejo robusto de secuencias de longitud variable
+![image](https://github.com/user-attachments/assets/9c298acd-c0e8-41c9-86ef-ecf86cfea462)
 
 #### 2. **Predicción de `has_valid_voyage`**
 - Modelo similar con secuencias por `application_date`
@@ -666,6 +740,7 @@ Se utilizaron modelos Prophet para pronosticar:
 #### 2. **Envíos de Aplicaciones**
 - Pronóstico diario basado en fechas de aplicación
 - Gráfica de predicción vs. Tasa de desempleo (U.S.)
+![image](https://github.com/user-attachments/assets/5567bed8-86bf-46c4-95e4-fcffe6c05fa0)
 
 ---
 
@@ -678,6 +753,11 @@ Se utilizaron modelos Prophet para pronosticar:
   - `Product Owner`
 
 > Comparaciones gráficas muestran correlación entre volumen de aplicaciones y popularidad de roles técnicos en el mercado laboral.
+![image](https://github.com/user-attachments/assets/319c2474-c741-4360-8419-6e9e52392569)
+![image](https://github.com/user-attachments/assets/cac0f60f-8012-4831-ae1d-6282f47e969e)
+![image](https://github.com/user-attachments/assets/972e8dca-e76c-4f39-982b-757f1fe434b2)
+![image](https://github.com/user-attachments/assets/d2f85dc7-2e0c-4ee3-82b6-98846443ae62)
+![image](https://github.com/user-attachments/assets/f66da9b7-b614-40e8-8ee2-2cea962cdb9e)
 
 ---
 
