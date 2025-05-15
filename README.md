@@ -223,7 +223,7 @@ El propósito de este notebook es realizar un análisis exploratorio de las apli
 
 
 * Métodos Matemáticos Aplicados
-* 
+ 
   * Estadísticas básicas: media, mediana, desviación estándar, conteos
 
   * Análisis de variables categóricas mediante frecuencias relativas
@@ -1028,8 +1028,6 @@ Se utilizó Google BigQuery como motor de análisis para unir las principales fu
 
 
 
-
-
 ## 6. Dashboard Analítico de Chingu
 
 Este dashboard fue diseñado para proporcionar una visión integral y dinámica de los datos de la plataforma Chingu, permitiendo analizar interactivamente la actividad de los usuarios, ingresos y participación en los proyectos.
@@ -1140,10 +1138,105 @@ Se utilizaron flujos de trabajo en **Orange Data Mining** para realizar análisi
 
 > Este flujo visual facilitó la validación de hipótesis rápidamente y ayudó a complementar los análisis hechos con Python y BigQuery.
 
-### 8. Metodología de Ciencia de Datos
+### 8. Infraestructura Docker para Procesamiento de Datos
 
-Se siguió la metodología **CRISP-DM**, que consta de:
-- Comprensión del negocio
+Se utilizó Docker para desplegar una arquitectura distribuida basada en contenedores, facilitando el análisis y almacenamiento de datos en gran escala.
+
+###  Contenedores Desplegados
+
+| Contenedor         | Imagen                      | Función                          |
+|--------------------|-----------------------------|----------------------------------|
+| `hadoop-docker`    | Configuración personalizada | Orquestador del clúster Hadoop   |
+| `namenode`         | `bde2020/hadoop-namenode`   | Nodo maestro HDFS                |
+| `datanode1`        | `bde2020/hadoop-datanode`   | Nodo de almacenamiento           |
+| `datanode2`        | `bde2020/hadoop-datanode`   | Nodo de almacenamiento           |
+| `nifi`             | `apache/nifi:1.24.0`        | Ingesta y automatización de datos|
+| `cassandra-seed`   | `cassandra:4.1`             | Nodo semilla de Cassandra        |
+| `cassandra-node1`  | `cassandra:4.1`             | Nodo de datos                    |
+| `cassandra-node2`  | `cassandra:4.1`             | Nodo de datos                    |
+
+###  Resumen Técnico
+
+- **Hadoop** permite almacenamiento distribuido con NameNode y DataNodes.
+- **NiFi** automatiza flujos ETL (por ejemplo, CSV hacia HDFS).
+- **Cassandra** almacena datos críticos con replicación entre nodos.
+
+> Todos los contenedores están gestionados desde Docker Desktop.
+
+###  Flujo de Datos con Apache NiFi
+
+Este flujo implementado en **Apache NiFi** automatiza la ingesta, transformación y almacenamiento de los archivos CSV utilizados en el análisis de datos de la plataforma **Chingu.io**.
+
+####  Descripción del Flujo
+
+1. **GetFile**  
+   - Escanea el directorio `/opt/nifi/input` para detectar archivos nuevos (como `applications.csv`, `transactions.csv`, etc.).
+
+2. **ConvertRecord**  
+   - Convierte los archivos CSV a registros estructurados utilizando `CSVReader` y `JsonRecordSetWriter`.
+
+3. **RouteOnAttribute**  
+   - Clasifica los archivos en función de su nombre (`filename`) y los redirige según el contenido:
+     - `applications.csv` → tabla `applications_backup`
+     - `transactions.csv` → tabla `transactions_backup`
+     - `completions.csv` → tabla `completions_backup`
+     - `voyage_schedule.csv` → tabla `voyage_schedule_backup`
+     - `merged_applications_transactions.csv` → tabla combinada
+
+4. **PutCassandraRecord**  
+   - Inserta los datos directamente en las tablas correspondientes de **Apache Cassandra**.
+
+5. **PutHDFS** *(en paralelo)*  
+   - Crea una copia de seguridad en el sistema distribuido HDFS (`/user/nifi`).
+
+---
+
+#### Componentes Principales
+
+| Componente           | Función                                               |
+|----------------------|--------------------------------------------------------|
+| `GetFile`            | Detección de nuevos archivos CSV                      |
+| `ConvertRecord`      | Conversión a registros estructurados                  |
+| `RouteOnAttribute`   | Enrutamiento según el tipo de archivo                 |
+| `PutCassandraRecord` | Inserción en Cassandra                                |
+| `PutHDFS`            | Almacenamiento en Hadoop HDFS                         |
+
+---
+
+#### Servicios Utilizados
+
+- `CSVReader` como lector de registros
+- `JsonRecordSetWriter` como escritor intermedio
+- `CassandraConnectionProvider` para conexión con Cassandra
+- Atributos como `filename` para lógica condicional
+
+> Este flujo permite un manejo robusto, escalable y automatizado del pipeline de datos desde su origen hasta el almacenamiento distribuido.
+
+
+### 9. Metodología de Ciencia de Datos
+
+Se siguió la metodología **CRISP-DM** (Cross Industry Standard Process for Data Mining), ampliamente adoptada en proyectos de ciencia de datos. Esta metodología se estructura en seis fases principales:
+
+- **Comprensión del negocio**  
+  Se definieron los objetivos principales: analizar la participación de usuarios, predecir la finalización de proyectos y optimizar las estrategias de donación en Chingu.io.
+
+- **Comprensión de los datos**  
+  Se exploraron múltiples fuentes de datos (aplicaciones, transacciones y finalizaciones), identificando su estructura, calidad y relaciones clave entre tablas.
+
+- **Preparación de los datos**  
+  Se realizó limpieza, estandarización, transformación y fusión de datasets utilizando scripts personalizados (`Cleaner.py`, `Applications_Cleaner.py`, etc.), así como flujos en Apache NiFi.
+
+- **Modelado**  
+  Se aplicaron modelos de regresión logística, Random Forest, PCA, k-Means, y modelos autoregresivos (LSTM) para predicción de comportamiento y segmentación de usuarios.
+
+- **Evaluación**  
+  Se analizaron métricas como Accuracy, F1, AUC y matriz de confusión para validar el rendimiento de los modelos. También se utilizaron herramientas visuales (Orange, Power BI).
+
+- **Despliegue**  
+  Los resultados se documentaron en notebooks, dashboards, y archivos `.md`, y se integraron como parte de una infraestructura reproducible usando Docker, BigQuery y Cassandra.
+
+> Esta metodología estructurada permitió asegurar la trazabilidad, calidad y valor analítico en cada etapa del proyecto.
+
 
 
 
