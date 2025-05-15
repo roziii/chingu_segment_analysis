@@ -338,6 +338,12 @@ El propósito de este notebook es analizar los datos relacionados con la finaliz
 * Análisis de puntuación en escalas (de 0 a 10)
 
 * Procesamiento de fechas para posibles análisis temporales
+![image](https://github.com/user-attachments/assets/368cc8fa-e6c7-4380-9a08-e7ec706dc9cd)
+![image](https://github.com/user-attachments/assets/cb9654fe-bf3d-48cb-8c5e-5856f04e1814)
+![image](https://github.com/user-attachments/assets/aa31b6dd-5829-4b7a-8153-cff448576295)
+
+
+
 
 ###### Resultados
 * Exportación de dataset limpio en CSV
@@ -390,6 +396,15 @@ Analizar los datos de transacciones financieras de los usuarios de Chingu.io par
   * Clasificación binaria con regresión logística para predecir pagos altos
 
   * Evaluación del modelo con métricas: Accuracy, Precision, Recall, F1, AUC
+ 
+  ![image](https://github.com/user-attachments/assets/3445a0d8-ddaf-4543-a2a1-343fbad865bd)
+  ![image](https://github.com/user-attachments/assets/019500de-d02d-465d-876c-d6e8091422b6)
+  ![image](https://github.com/user-attachments/assets/10c56f27-fa07-4d1b-b3ff-a89888765be9)
+  ![image](https://github.com/user-attachments/assets/b61c0c5d-fe1f-437e-8636-e0099b993921)
+  ![image](https://github.com/user-attachments/assets/20a4de76-453b-46ce-bd5b-a78017f30375)
+  ![image](https://github.com/user-attachments/assets/dad29ac5-3a87-4005-a891-2f026164bec0)
+  ![image](https://github.com/user-attachments/assets/9ee279e0-40a7-4de4-a523-173acd4ae4e0)
+
 
 ###### Técnicas Matemáticas y de Machine Learning
 * Estadísticas descriptivas
@@ -481,10 +496,23 @@ Random Forest	0.9737	0.9977
 Logistic (Extra)	—	0.9681
 Random Forest (Extra)	—	0.9982
 ```
+#### voyage_completion 
+![image](https://github.com/user-attachments/assets/bf6b7c11-5eb0-4c3b-8ab9-ed6f746c8980)
+![image](https://github.com/user-attachments/assets/c3b14cf8-9475-4934-8e4f-af1133c8abd5)
+![image](https://github.com/user-attachments/assets/3821b8ac-1d33-400e-8277-c5a618b80d42)
+![image](https://github.com/user-attachments/assets/4ae02678-1d96-4922-9f2e-57ccfdc7826d)
+![image](https://github.com/user-attachments/assets/015ed4c3-74c7-422f-9b3b-86653d0f3af9)
+![image](https://github.com/user-attachments/assets/4c0d4c26-250a-48e4-95fd-993469cb26b6)
+![image](https://github.com/user-attachments/assets/862c8395-3ba9-4d7b-9ffc-334fad6d9422)
+
+
+
 
 ##### Análisis enriquecido del archivo application_voyage_list_merge.ipynb (Español)
 ###### Objetivo:
 Predecir la participación de usuarios en futuros Voyages de Chingu.io a partir de datos de aplicación, con visualización de tendencias, reducción de dimensiones, y modelos predictivos de alta precisión.
+
+
 
 ###### Datos de entrada:
 * Número total de aplicaciones: 10,600
@@ -492,6 +520,17 @@ Predecir la participación de usuarios en futuros Voyages de Chingu.io a partir 
 * Variable objetivo: has_voyage (0 o 1)
 
 * Variables clave: rol, objetivo, género, origen, estado de suscripción
+![image](https://github.com/user-attachments/assets/5f2a343c-6949-45ba-a49b-82748e1666c4)
+![image](https://github.com/user-attachments/assets/e8fc88a6-9c8a-4930-a55b-bfb9b4b48f10)
+![image](https://github.com/user-attachments/assets/afd0ddf0-1269-4921-8bc3-98b57decc643)
+![image](https://github.com/user-attachments/assets/c2555ff0-4582-48ac-b312-335103335e87)
+![image](https://github.com/user-attachments/assets/eb93083b-b014-4c81-9322-ca60e9c66841)
+![image](https://github.com/user-attachments/assets/35018996-b841-40cf-b1b8-fd4f0d0de8e1)
+![image](https://github.com/user-attachments/assets/e29023cd-f28a-48a8-a082-51ef9aad878c)
+
+
+
+
 
 ###### Análisis exploratorio:
 * Día más activo: lunes y martes
@@ -508,7 +547,7 @@ Predecir la participación de usuarios en futuros Voyages de Chingu.io a partir 
 * Mayor cantidad de Voyages activos entre julio y noviembre
 
 ###### Modelado predictivo:
-Modelo: Random Forest Classifier
+Modelo: Random Forest Classifier (has_voyage)
 
 Evaluación:
 
@@ -516,6 +555,10 @@ Evaluación:
 |--------------------|-----------|----------|------|
 | Entrenamiento/Test | 100%      | 1.00     | 1.00 |
 | Extrapolación      | 100%      | 1.00     | 1.00 |
+![image](https://github.com/user-attachments/assets/54626c27-b071-40ae-9caf-e46318626cd5)
+![image](https://github.com/user-attachments/assets/38d650f7-3be8-4ec2-8166-a6414326dc36)
+![image](https://github.com/user-attachments/assets/287cebbc-d58b-4974-9e43-2fbc84454fd5)
+![image](https://github.com/user-attachments/assets/6558f1a5-4f95-472c-b2ac-e6a3912f5ca8)
 
 
 ###### Reducción de dimensiones (PCA):
