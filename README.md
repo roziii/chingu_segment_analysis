@@ -216,7 +216,10 @@ El propósito de este notebook es realizar un análisis exploratorio de las apli
     ![Image](https://github.com/user-attachments/assets/76c925c9-4b3d-4d56-9744-e856fc81122e)
     ![Image](https://github.com/user-attachments/assets/a655c81c-c450-4f96-b116-c9f13532eaa7)
     ![Image](https://github.com/user-attachments/assets/a7b714f7-200c-476b-a766-7b13d5f999df)
- 
+    ![image](https://github.com/user-attachments/assets/02ee7013-3c91-4763-a399-5fdbd0955542)
+    ![image](https://github.com/user-attachments/assets/79ab20f4-05dd-4b05-bbcb-8a0dd144f713)
+    ![image](https://github.com/user-attachments/assets/712c14f4-3d34-4715-a693-94428ebae354)
+    ![image](https://github.com/user-attachments/assets/1a889c86-c0e5-4ae1-954c-068c06da81c4)
 
 
 * Métodos Matemáticos Aplicados
@@ -262,6 +265,17 @@ Este notebook tiene como propósito analizar los datos de transacciones de la pl
   * Exploración de columnas clave usando histogramas y gráficos de barras
 
   * Análisis por año, mes y semana de transacción
+    
+   ![image](https://github.com/user-attachments/assets/e96e0183-f8fb-4ddf-950f-55e3b48f8ad5)
+
+   ![image](https://github.com/user-attachments/assets/ce0d6c8e-8988-4b18-9ebf-b22e4bd9b9c3)
+  
+  ![image](https://github.com/user-attachments/assets/b29b2d73-7d49-4f6d-84ae-a87bd11810ae)
+  
+  ![image](https://github.com/user-attachments/assets/473fe54e-c689-415a-95ba-c64f4451d28b)
+
+  ![image](https://github.com/user-attachments/assets/64a7a06d-c657-4c55-95d5-a3ee7b358da8)
+
 
 * Descomposición Estacional:
 
