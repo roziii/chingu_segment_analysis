@@ -68,7 +68,10 @@ El proyecto está organizado de manera modular para facilitar el análisis, limp
 
 El desarrollo del proyecto se organiza mediante un tablero de seguimiento visual en GitHub, dividido en diferentes columnas que representan el estado de cada tarea. Esta estructura permite mantener una visión clara del avance y facilita la colaboración entre miembros del equipo.
 
-![image](https://github.com/user-attachments/assets/adce4931-1227-4d62-bfe5-2b5e02dbd2a9)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/adce4931-1227-4d62-bfe5-2b5e02dbd2a9" alt="image" />
+  <br><em>fig_1</em>
+</p>
 
 ### data/
 Contiene los archivos de datos utilizados en el análisis. Incluye:
@@ -217,14 +220,46 @@ El propósito de este notebook es realizar un análisis exploratorio de las apli
 
   * Segmentación por participación en Voyages (has_voyage)
     
-    ![Image](https://github.com/user-attachments/assets/e2bb4dff-d8c5-4928-adbd-5a4ec1659277)
-    ![Image](https://github.com/user-attachments/assets/76c925c9-4b3d-4d56-9744-e856fc81122e)
-    ![Image](https://github.com/user-attachments/assets/a655c81c-c450-4f96-b116-c9f13532eaa7)
-    ![Image](https://github.com/user-attachments/assets/a7b714f7-200c-476b-a766-7b13d5f999df)
-    ![image](https://github.com/user-attachments/assets/02ee7013-3c91-4763-a399-5fdbd0955542)
-    ![image](https://github.com/user-attachments/assets/79ab20f4-05dd-4b05-bbcb-8a0dd144f713)
-    ![image](https://github.com/user-attachments/assets/712c14f4-3d34-4715-a693-94428ebae354)
-    ![image](https://github.com/user-attachments/assets/1a889c86-c0e5-4ae1-954c-068c06da81c4)
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/e2bb4dff-d8c5-4928-adbd-5a4ec1659277" alt="Image 2" />
+  <br><em>fig_2</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/76c925c9-4b3d-4d56-9744-e856fc81122e" alt="Image 3" />
+  <br><em>fig_3</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a655c81c-c450-4f96-b116-c9f13532eaa7" alt="Image 4" />
+  <br><em>fig_4</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a7b714f7-200c-476b-a766-7b13d5f999df" alt="Image 5" />
+  <br><em>fig_5</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/02ee7013-3c91-4763-a399-5fdbd0955542" alt="Image 6" />
+  <br><em>fig_6</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/79ab20f4-05dd-4b05-bbcb-8a0dd144f713" alt="Image 7" />
+  <br><em>fig_7</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/712c14f4-3d34-4715-a693-94428ebae354" alt="Image 8" />
+  <br><em>fig_8</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1a889c86-c0e5-4ae1-954c-068c06da81c4" alt="Image 9" />
+  <br><em>fig_9</em>
+</p>
+
 
 
 * Métodos Matemáticos Aplicados
@@ -271,15 +306,30 @@ Este notebook tiene como propósito analizar los datos de transacciones de la pl
 
   * Análisis por año, mes y semana de transacción
     
-   ![image](https://github.com/user-attachments/assets/e96e0183-f8fb-4ddf-950f-55e3b48f8ad5)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e96e0183-f8fb-4ddf-950f-55e3b48f8ad5" alt="Image 10" />
+  <br><em>fig_10</em>
+</p>
 
-   ![image](https://github.com/user-attachments/assets/ce0d6c8e-8988-4b18-9ebf-b22e4bd9b9c3)
-  
-  ![image](https://github.com/user-attachments/assets/b29b2d73-7d49-4f6d-84ae-a87bd11810ae)
-  
-  ![image](https://github.com/user-attachments/assets/473fe54e-c689-415a-95ba-c64f4451d28b)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ce0d6c8e-8988-4b18-9ebf-b22e4bd9b9c3" alt="Image 11" />
+  <br><em>fig_11</em>
+</p>
 
-  ![image](https://github.com/user-attachments/assets/64a7a06d-c657-4c55-95d5-a3ee7b358da8)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b29b2d73-7d49-4f6d-84ae-a87bd11810ae" alt="Image 12" />
+  <br><em>fig_12</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/473fe54e-c689-415a-95ba-c64f4451d28b" alt="Image 13" />
+  <br><em>fig_13</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/64a7a06d-c657-4c55-95d5-a3ee7b358da8" alt="Image 14" />
+  <br><em>fig_14</em>
+</p>
 
 
 * Descomposición Estacional:
@@ -343,9 +393,21 @@ El propósito de este notebook es analizar los datos relacionados con la finaliz
 * Análisis de puntuación en escalas (de 0 a 10)
 
 * Procesamiento de fechas para posibles análisis temporales
-![image](https://github.com/user-attachments/assets/368cc8fa-e6c7-4380-9a08-e7ec706dc9cd)
-![image](https://github.com/user-attachments/assets/cb9654fe-bf3d-48cb-8c5e-5856f04e1814)
-![image](https://github.com/user-attachments/assets/aa31b6dd-5829-4b7a-8153-cff448576295)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/368cc8fa-e6c7-4380-9a08-e7ec706dc9cd" alt="Image 15" />
+  <br><em>fig_15</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cb9654fe-bf3d-48cb-8c5e-5856f04e1814" alt="Image 16" />
+  <br><em>fig_16</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/aa31b6dd-5829-4b7a-8153-cff448576295" alt="Image 17" />
+  <br><em>fig_17</em>
+</p>
+
 
 
 
@@ -402,13 +464,41 @@ Analizar los datos de transacciones financieras de los usuarios de Chingu.io par
 
   * Evaluación del modelo con métricas: Accuracy, Precision, Recall, F1, AUC
  
-  ![image](https://github.com/user-attachments/assets/3445a0d8-ddaf-4543-a2a1-343fbad865bd)
-  ![image](https://github.com/user-attachments/assets/019500de-d02d-465d-876c-d6e8091422b6)
-  ![image](https://github.com/user-attachments/assets/10c56f27-fa07-4d1b-b3ff-a89888765be9)
-  ![image](https://github.com/user-attachments/assets/b61c0c5d-fe1f-437e-8636-e0099b993921)
-  ![image](https://github.com/user-attachments/assets/20a4de76-453b-46ce-bd5b-a78017f30375)
-  ![image](https://github.com/user-attachments/assets/dad29ac5-3a87-4005-a891-2f026164bec0)
-  ![image](https://github.com/user-attachments/assets/9ee279e0-40a7-4de4-a523-173acd4ae4e0)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3445a0d8-ddaf-4543-a2a1-343fbad865bd" alt="Image 18" />
+  <br><em>fig_18</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/019500de-d02d-465d-876c-d6e8091422b6" alt="Image 19" />
+  <br><em>fig_19</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/10c56f27-fa07-4d1b-b3ff-a89888765be9" alt="Image 20" />
+  <br><em>fig_20</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b61c0c5d-fe1f-437e-8636-e0099b993921" alt="Image 21" />
+  <br><em>fig_21</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/20a4de76-453b-46ce-bd5b-a78017f30375" alt="Image 22" />
+  <br><em>fig_22</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dad29ac5-3a87-4005-a891-2f026164bec0" alt="Image 23" />
+  <br><em>fig_23</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9ee279e0-40a7-4de4-a523-173acd4ae4e0" alt="Image 24" />
+  <br><em>fig_24</em>
+</p>
+
 
 
 ###### Técnicas Matemáticas y de Machine Learning
@@ -502,13 +592,41 @@ Logistic (Extra)	—	0.9681
 Random Forest (Extra)	—	0.9982
 ```
 #### voyage_completion 
-![image](https://github.com/user-attachments/assets/bf6b7c11-5eb0-4c3b-8ab9-ed6f746c8980)
-![image](https://github.com/user-attachments/assets/c3b14cf8-9475-4934-8e4f-af1133c8abd5)
-![image](https://github.com/user-attachments/assets/3821b8ac-1d33-400e-8277-c5a618b80d42)
-![image](https://github.com/user-attachments/assets/4ae02678-1d96-4922-9f2e-57ccfdc7826d)
-![image](https://github.com/user-attachments/assets/015ed4c3-74c7-422f-9b3b-86653d0f3af9)
-![image](https://github.com/user-attachments/assets/4c0d4c26-250a-48e4-95fd-993469cb26b6)
-![image](https://github.com/user-attachments/assets/862c8395-3ba9-4d7b-9ffc-334fad6d9422)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bf6b7c11-5eb0-4c3b-8ab9-ed6f746c8980" alt="Image 25" />
+  <br><em>fig_25</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c3b14cf8-9475-4934-8e4f-af1133c8abd5" alt="Image 26" />
+  <br><em>fig_26</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3821b8ac-1d33-400e-8277-c5a618b80d42" alt="Image 27" />
+  <br><em>fig_27</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4ae02678-1d96-4922-9f2e-57ccfdc7826d" alt="Image 28" />
+  <br><em>fig_28</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/015ed4c3-74c7-422f-9b3b-86653d0f3af9" alt="Image 29" />
+  <br><em>fig_29</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4c0d4c26-250a-48e4-95fd-993469cb26b6" alt="Image 30" />
+  <br><em>fig_30</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/862c8395-3ba9-4d7b-9ffc-334fad6d9422" alt="Image 31" />
+  <br><em>fig_31</em>
+</p>
+
 
 
 
@@ -525,13 +643,40 @@ Predecir la participación de usuarios en futuros Voyages de Chingu.io a partir 
 * Variable objetivo: has_voyage (0 o 1)
 
 * Variables clave: rol, objetivo, género, origen, estado de suscripción
-![image](https://github.com/user-attachments/assets/5f2a343c-6949-45ba-a49b-82748e1666c4)
-![image](https://github.com/user-attachments/assets/e8fc88a6-9c8a-4930-a55b-bfb9b4b48f10)
-![image](https://github.com/user-attachments/assets/afd0ddf0-1269-4921-8bc3-98b57decc643)
-![image](https://github.com/user-attachments/assets/c2555ff0-4582-48ac-b312-335103335e87)
-![image](https://github.com/user-attachments/assets/eb93083b-b014-4c81-9322-ca60e9c66841)
-![image](https://github.com/user-attachments/assets/35018996-b841-40cf-b1b8-fd4f0d0de8e1)
-![image](https://github.com/user-attachments/assets/e29023cd-f28a-48a8-a082-51ef9aad878c)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5f2a343c-6949-45ba-a49b-82748e1666c4" alt="Image 32" />
+  <br><em>fig_32</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e8fc88a6-9c8a-4930-a55b-bfb9b4b48f10" alt="Image 33" />
+  <br><em>fig_33</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/afd0ddf0-1269-4921-8bc3-98b57decc643" alt="Image 34" />
+  <br><em>fig_34</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c2555ff0-4582-48ac-b312-335103335e87" alt="Image 35" />
+  <br><em>fig_35</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/eb93083b-b014-4c81-9322-ca60e9c66841" alt="Image 36" />
+  <br><em>fig_36</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/35018996-b841-40cf-b1b8-fd4f0d0de8e1" alt="Image 37" />
+  <br><em>fig_37</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e29023cd-f28a-48a8-a082-51ef9aad878c" alt="Image 38" />
+  <br><em>fig_38</em>
+</p>
 
 
 
@@ -560,10 +705,27 @@ Evaluación:
 |--------------------|-----------|----------|------|
 | Entrenamiento/Test | 100%      | 1.00     | 1.00 |
 | Extrapolación      | 100%      | 1.00     | 1.00 |
-![image](https://github.com/user-attachments/assets/54626c27-b071-40ae-9caf-e46318626cd5)
-![image](https://github.com/user-attachments/assets/38d650f7-3be8-4ec2-8166-a6414326dc36)
-![image](https://github.com/user-attachments/assets/287cebbc-d58b-4974-9e43-2fbc84454fd5)
-![image](https://github.com/user-attachments/assets/6558f1a5-4f95-472c-b2ac-e6a3912f5ca8)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/54626c27-b071-40ae-9caf-e46318626cd5" alt="Image 39" />
+  <br><em>fig_39</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/38d650f7-3be8-4ec2-8166-a6414326dc36" alt="Image 40" />
+  <br><em>fig_40</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/287cebbc-d58b-4974-9e43-2fbc84454fd5" alt="Image 41" />
+  <br><em>fig_41</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6558f1a5-4f95-472c-b2ac-e6a3912f5ca8" alt="Image 42" />
+  <br><em>fig_42</em>
+</p>
+
 
 
 ###### Reducción de dimensiones (PCA):
@@ -577,7 +739,11 @@ fuente de adquisición
 
 rol, objetivo, estado de suscripción
 
-![image](https://github.com/user-attachments/assets/2432c9e2-8f46-44f0-b88f-f68d90ef3846)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2432c9e2-8f46-44f0-b88f-f68d90ef3846" alt="Image 43" />
+  <br><em>fig_43</em>
+</p>
+
 
 
 ###### Evaluación del aprendizaje del modelo:
@@ -606,11 +772,32 @@ Se aplicó **Análisis de Componentes Principales (PCA)** a los tres conjuntos d
 
 - Principales atributos:
   - `application_date`, `goal`, `source`, `product`, `tier`, `completion_status`, `net_payment`, `subscription_status`
-![image](https://github.com/user-attachments/assets/b7cfb385-3507-4137-ba88-1d54985bef6c)
-![image](https://github.com/user-attachments/assets/4f69c4b3-3888-427c-9d21-0727520dcfba)
-![image](https://github.com/user-attachments/assets/d09e5c96-43d6-4425-aa29-e2816544754b)
-![image](https://github.com/user-attachments/assets/d4ca2a92-a57c-4885-bf9c-a823babd3762)
-![image](https://github.com/user-attachments/assets/0de3d2a0-e733-4953-b800-5520443d6b7d)
+    
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b7cfb385-3507-4137-ba88-1d54985bef6c" alt="Image 44" />
+  <br><em>fig_44</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4f69c4b3-3888-427c-9d21-0727520dcfba" alt="Image 45" />
+  <br><em>fig_45</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d09e5c96-43d6-4425-aa29-e2816544754b" alt="Image 46" />
+  <br><em>fig_46</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d4ca2a92-a57c-4885-bf9c-a823babd3762" alt="Image 47" />
+  <br><em>fig_47</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0de3d2a0-e733-4953-b800-5520443d6b7d" alt="Image 48" />
+  <br><em>fig_48</em>
+</p>
+
 
 ---
 
@@ -625,18 +812,67 @@ Se entrenaron tres modelos para predecir el estado de suscripción (`Activa`, `T
 | Logistic Regression    | 86.44%   | 0.8640   | 0.9559  |
 
 >  **Gradient Boosting** presentó el mejor rendimiento general.
-![image](https://github.com/user-attachments/assets/ff040e48-012a-4623-9af5-f40fbabbbd26)
-![image](https://github.com/user-attachments/assets/54154706-d6bb-4023-8a7d-dde2bb8d94ee)
-![image](https://github.com/user-attachments/assets/4b172062-4b98-4806-9e32-0ef34e8460e7)
-![image](https://github.com/user-attachments/assets/64b14e1a-b384-4174-a0fd-9a813bae93f7)
-![image](https://github.com/user-attachments/assets/b6678d55-01ef-4045-9729-9b7817d1c538)
-![image](https://github.com/user-attachments/assets/011bea23-f075-418e-a6f3-22ff92a51884)
-![image](https://github.com/user-attachments/assets/8d040d3f-87a9-4d32-bebb-37c6272f68e2)
-![image](https://github.com/user-attachments/assets/1b256d9a-c9dd-4c4f-a3d4-e49e65116a07)
-![image](https://github.com/user-attachments/assets/a60b5ec1-4469-488c-a0bc-968d4109571d)
-![image](https://github.com/user-attachments/assets/c07952b5-ef8c-48be-a25c-0144a6536dba)
-![image](https://github.com/user-attachments/assets/e4dc121a-f2c6-48ae-adfd-879231dbd1f9)
-![image](https://github.com/user-attachments/assets/568283d1-3b88-4aa8-947e-68c7fb40cfa9)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ff040e48-012a-4623-9af5-f40fbabbbd26" alt="Image 49" />
+  <br><em>fig_49</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/54154706-d6bb-4023-8a7d-dde2bb8d94ee" alt="Image 50" />
+  <br><em>fig_50</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4b172062-4b98-4806-9e32-0ef34e8460e7" alt="Image 51" />
+  <br><em>fig_51</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/64b14e1a-b384-4174-a0fd-9a813bae93f7" alt="Image 52" />
+  <br><em>fig_52</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b6678d55-01ef-4045-9729-9b7817d1c538" alt="Image 53" />
+  <br><em>fig_53</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/011bea23-f075-418e-a6f3-22ff92a51884" alt="Image 54" />
+  <br><em>fig_54</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8d040d3f-87a9-4d32-bebb-37c6272f68e2" alt="Image 55" />
+  <br><em>fig_55</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1b256d9a-c9dd-4c4f-a3d4-e49e65116a07" alt="Image 56" />
+  <br><em>fig_56</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a60b5ec1-4469-488c-a0bc-968d4109571d" alt="Image 57" />
+  <br><em>fig_57</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c07952b5-ef8c-48be-a25c-0144a6536dba" alt="Image 58" />
+  <br><em>fig_58</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e4dc121a-f2c6-48ae-adfd-879231dbd1f9" alt="Image 59" />
+  <br><em>fig_59</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/568283d1-3b88-4aa8-947e-68c7fb40cfa9" alt="Image 60" />
+  <br><em>fig_60</em>
+</p>
+
 
 ---
 
@@ -651,8 +887,16 @@ Se predijo el valor monetario `net_payment` usando modelos de regresión:
 | MAE           | 0.44     | 0.50          |
 | R² Score      | 0.83     | 0.75          |
 
-![image](https://github.com/user-attachments/assets/26003fe1-ab94-4374-8269-58851e1de914)
-![image](https://github.com/user-attachments/assets/7c1fccf1-80dd-4c16-8897-141e0c1a6489)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/26003fe1-ab94-4374-8269-58851e1de914" alt="Image 61" />
+  <br><em>fig_61</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7c1fccf1-80dd-4c16-8897-141e0c1a6489" alt="Image 62" />
+  <br><em>fig_62</em>
+</p>
+
 
 ---
 
@@ -725,7 +969,12 @@ Se construyeron dos modelos:
 - Exactitud de prueba (`Test Accuracy`): **99.38%**
 - Visualización de predicciones secuenciales por usuario
 - Manejo robusto de secuencias de longitud variable
-![image](https://github.com/user-attachments/assets/9c298acd-c0e8-41c9-86ef-ecf86cfea462)
+  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9c298acd-c0e8-41c9-86ef-ecf86cfea462" alt="Image 63" />
+  <br><em>fig_63</em>
+</p>
+
 
 #### 2. **Predicción de `has_valid_voyage`**
 - Modelo similar con secuencias por `application_date`
@@ -745,7 +994,11 @@ Se utilizaron modelos Prophet para pronosticar:
 #### 2. **Envíos de Aplicaciones**
 - Pronóstico diario basado en fechas de aplicación
 - Gráfica de predicción vs. Tasa de desempleo (U.S.)
-![image](https://github.com/user-attachments/assets/5567bed8-86bf-46c4-95e4-fcffe6c05fa0)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5567bed8-86bf-46c4-95e4-fcffe6c05fa0" alt="Image 64" />
+  <br><em>fig_64</em>
+</p>
+
 
 ---
 
@@ -758,11 +1011,31 @@ Se utilizaron modelos Prophet para pronosticar:
   - `Product Owner`
 
 > Comparaciones gráficas muestran correlación entre volumen de aplicaciones y popularidad de roles técnicos en el mercado laboral.
-![image](https://github.com/user-attachments/assets/319c2474-c741-4360-8419-6e9e52392569)
-![image](https://github.com/user-attachments/assets/cac0f60f-8012-4831-ae1d-6282f47e969e)
-![image](https://github.com/user-attachments/assets/972e8dca-e76c-4f39-982b-757f1fe434b2)
-![image](https://github.com/user-attachments/assets/d2f85dc7-2e0c-4ee3-82b6-98846443ae62)
-![image](https://github.com/user-attachments/assets/f66da9b7-b614-40e8-8ee2-2cea962cdb9e)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/319c2474-c741-4360-8419-6e9e52392569" alt="Image 65" />
+  <br><em>fig_65</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cac0f60f-8012-4831-ae1d-6282f47e969e" alt="Image 66" />
+  <br><em>fig_66</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/972e8dca-e76c-4f39-982b-757f1fe434b2" alt="Image 67" />
+  <br><em>fig_67</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d2f85dc7-2e0c-4ee3-82b6-98846443ae62" alt="Image 68" />
+  <br><em>fig_68</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f66da9b7-b614-40e8-8ee2-2cea962cdb9e" alt="Image 69" />
+  <br><em>fig_69</em>
+</p>
+
 
 ---
 
@@ -1016,19 +1289,55 @@ Se utilizó Google BigQuery como motor de análisis para unir las principales fu
 3. Calcular la tasa de finalización de proyectos según el rol en el Voyage  
 4. Analizar los niveles de satisfacción a través del NPS (Net Promoter Score)
 
-![image](https://github.com/user-attachments/assets/8b388d38-8c85-433d-b2a1-d38b2b1ff6c2)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8b388d38-8c85-433d-b2a1-d38b2b1ff6c2" alt="Image 70" />
+  <br><em>fig_70</em>
+</p>
+
 * Recuento de usuarios por estado de suscripción
-![image](https://github.com/user-attachments/assets/145578e2-11dd-4e80-acd0-06595e9f5695)
-![image](https://github.com/user-attachments/assets/f6c291e3-6f6d-4972-8081-92763d05de58)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/145578e2-11dd-4e80-acd0-06595e9f5695" alt="Image 71" />
+  <br><em>fig_71</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f6c291e3-6f6d-4972-8081-92763d05de58" alt="Image 72" />
+  <br><em>fig_72</em>
+</p>
+
 * Pago neto promedio por producto
-![image](https://github.com/user-attachments/assets/7bee5f78-6d34-424f-9eb0-a295f52b75b5)
-![image](https://github.com/user-attachments/assets/10d5b8c5-91e0-47cb-b912-e9283af6a3c2)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7bee5f78-6d34-424f-9eb0-a295f52b75b5" alt="Image 73" />
+  <br><em>fig_73</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/10d5b8c5-91e0-47cb-b912-e9283af6a3c2" alt="Image 74" />
+  <br><em>fig_74</em>
+</p>
+
 * Completion Rate by Voyage Role
-![image](https://github.com/user-attachments/assets/8b29dbd7-8416-4537-8137-d2e11bba3572)
-![image](https://github.com/user-attachments/assets/072e2024-345c-42df-91aa-b9f20ecbfd7b)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8b29dbd7-8416-4537-8137-d2e11bba3572" alt="Image 75" />
+  <br><em>fig_75</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/072e2024-345c-42df-91aa-b9f20ecbfd7b" alt="Image 76" />
+  <br><em>fig_76</em>
+</p>
+
 * Distribución de puntuaciones del NPS
-![image](https://github.com/user-attachments/assets/50786f05-c71c-415d-9a01-120eca326169)
-![image](https://github.com/user-attachments/assets/6d3cda07-014e-40b0-b69f-ed341662a894)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/50786f05-c71c-415d-9a01-120eca326169" alt="Image 77" />
+  <br><em>fig_77</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6d3cda07-014e-40b0-b69f-ed341662a894" alt="Image 78" />
+  <br><em>fig_78</em>
+</p>
+
 )
 
 
@@ -1057,12 +1366,35 @@ Este dashboard fue diseñado para proporcionar una visión integral y dinámica 
 | **Análisis Geográfico** | Mapa de calor según país de origen de los usuarios |
 | **Filtros Interactivos** | Por rol, género, suscripción, producto, país, entre otros |
 
-![image](https://github.com/user-attachments/assets/f515497b-9ea5-47f6-ba35-17b16e6ec787)
-![image](https://github.com/user-attachments/assets/98722acc-36a8-445c-85da-af2d5289ff5e)
-![image](https://github.com/user-attachments/assets/f12ce49d-4e54-466d-acd6-6467aa6871a5)
-![image](https://github.com/user-attachments/assets/0fdb6416-df8e-424f-a8a8-528050a88072)
-![image](https://github.com/user-attachments/assets/16116ec0-ba6d-412b-948b-f309203b2907)
-![image](https://github.com/user-attachments/assets/0e5927bb-b29e-4ca4-aa21-50dd55ec4a75).
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f515497b-9ea5-47f6-ba35-17b16e6ec787" alt="Image 79" />
+  <br><em>fig_79</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/98722acc-36a8-445c-85da-af2d5289ff5e" alt="Image 80" />
+  <br><em>fig_80</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f12ce49d-4e54-466d-acd6-6467aa6871a5" alt="Image 81" />
+  <br><em>fig_81</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0fdb6416-df8e-424f-a8a8-528050a88072" alt="Image 82" />
+  <br><em>fig_82</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/16116ec0-ba6d-412b-948b-f309203b2907" alt="Image 83" />
+  <br><em>fig_83</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0e5927bb-b29e-4ca4-aa21-50dd55ec4a75" alt="Image 84" />
+  <br><em>fig_84</em>
+</p>
 
 
 
@@ -1132,7 +1464,11 @@ Se utilizaron flujos de trabajo en **Orange Data Mining** para realizar análisi
 - El uso de Orange permitió una exploración rápida y visual sin necesidad de codificación manual.
 
 ---
-![image](https://github.com/user-attachments/assets/a68cbd73-bb55-4e2a-b56b-8ec29d04c288)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a68cbd73-bb55-4e2a-b56b-8ec29d04c288" alt="Image 85" />
+  <br><em>fig_85</em>
+</p>
+
 **
 ###  Herramientas Utilizadas
 
