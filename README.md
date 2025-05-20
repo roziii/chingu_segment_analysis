@@ -1493,6 +1493,7 @@ Se siguió la metodología **CRISP-DM** (Cross Industry Standard Process for Dat
 
 > Esta metodología estructurada permitió asegurar la trazabilidad, calidad y valor analítico en cada etapa del proyecto.
 
-
+## Resumen
+Este proyecto tiene como objetivo analizar y predecir el comportamiento de los usuarios de la plataforma Chingu.io a lo largo de su ciclo de participación, desde la aplicación inicial hasta la finalización de los proyectos (Voyages). A través de un enfoque integral que combina análisis exploratorio de datos, reducción de dimensiones, modelos predictivos supervisados y pronósticos temporales, se logró entender mejor los factores que influyen en la suscripción, participación y pago de los usuarios. Además, se incorporaron fuentes externas como tasas de desempleo y tendencias de búsqueda en Google para enriquecer el análisis. Las herramientas utilizadas incluyeron Python (scikit-learn, Prophet, PyTorch), Power BI, Google BigQuery y Orange Data Mining. El resultado es un sistema robusto de analítica avanzada que apoya la toma de decisiones estratégicas para el crecimiento de la plataforma.
 
 
