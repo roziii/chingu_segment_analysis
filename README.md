@@ -191,614 +191,679 @@ Luego de contactar con el equipo de Chingu, se confirmó que algunas aplicacione
 Conclusión
 Este hallazgo es importante para interpretar correctamente los análisis financieros y de completitud de las aplicaciones. Se recomienda considerar estos registros al realizar inferencias o modelado predictivo.
 
-## Applications_EDA.ipynb
-
-### 🎯 Objetivo
+#### Applications_EDA.ipynb — Español
+##### Objetivo
 El propósito de este notebook es realizar un análisis exploratorio de las aplicaciones registradas en la plataforma Chingu, para descubrir patrones, tendencias y problemas de calidad en los datos.
 
----
+##### Metodología Utilizada
+* Preprocesamiento de Datos
 
-### 🧰 Metodología Utilizada
+  * Limpieza de valores nulos y columnas irrelevantes
 
-#### Preprocesamiento de Datos
-- Limpieza de valores nulos y columnas irrelevantes
-- Uso de la clase `DataCleaner_Application`
+  * Uso de la clase DataCleaner_Application
 
-#### Normalización y Estandarización
-- Homogeneización de nombres de columnas
-- Clasificación de campos como género, rol en el Voyage, objetivos, etc.
+* Normalización y Estandarización
 
-<p align="center">
-  <img src="/assets/fig_4.png" alt="Distribución de género en aplicaciones registradas" />
-  <br><em>fig_4</em>
-</p>
+  * Homogeneización de nombres de columnas
 
-#### Análisis Descriptivo
-- Estadísticas generales: media, desviación estándar, percentiles
-- Conteo de valores por categoría (por ejemplo: fuentes, países, géneros)
+  * Clasificación de campos como género, rol en el Voyage, objetivos, etc.
 
----
+* Análisis Descriptivo
 
-### 🧮 Métodos Matemáticos Aplicados
+  * Estadísticas generales: media, desviación estándar, percentiles
 
-- Estadísticas básicas: media, mediana, desviación estándar, conteos
-- Análisis de variables categóricas mediante frecuencias relativas
-- Conversión temporal para agrupar por semanas y meses
-- Evaluación de participación (`0` o `1`) como variable binaria
+  * Conteo de valores por categoría (ej. fuentes, países, géneros)
 
----
+* Análisis de Distribución
 
-### 📊 Análisis de Distribución
+  * Evaluación de la distribución de las fechas, semanas y meses de las aplicaciones
 
-#### Distribución temporal
-- Evaluación de la distribución de las fechas, semanas y meses de las aplicaciones
-
-<p align="center">
-  <img src="/assets/fig_8.png" alt="Histograma del año de registro de aplicaciones" />
-  <br><em>fig_8</em>
-</p>
-
-#### Participación en Voyages
-- Segmentación por usuarios con o sin participación (`has_voyage`)
-
-<p align="center">
-  <img src="/assets/fig_9.png" alt="Distribución binaria de participación en proyectos Voyage" />
-  <br><em>fig_9</em>
-</p>
-
----
-
-### 📈 Visualizaciones Específicas
-
-#### 1. Distribución de `subscription_status`
-
-<p align="center">
-  <img src="/assets/fig_2.png" alt="Porcentaje de usuarios activos e inactivos según su estado de suscripción" />
+  * Segmentación por participación en Voyages (has_voyage)
+    
+  <p align="center">
+  <img src="assets/fig_2.png" alt="fig_2" />
   <br><em>fig_2</em>
 </p>
 
-#### 2. Distribución de `voyage_role`
-
 <p align="center">
-  <img src="/assets/fig_3.png" alt="Distribución de roles solicitados por los participantes (Developer, Product Owner, etc.)" />
+  <img src="assets/fig_3.png" alt="fig_3" />
   <br><em>fig_3</em>
 </p>
 
-#### 3. Distribución de `goal`
+<p align="center">
+  <img src="assets/fig_4.png" alt="fig_4" />
+  <br><em>fig_4</em>
+</p>
 
 <p align="center">
-  <img src="/assets/fig_5.png" alt="Motivaciones principales de los usuarios para unirse a Chingu" />
+  <img src="assets/fig_5.png" alt="fig_5" />
   <br><em>fig_5</em>
 </p>
 
-#### 4. Histograma de `application_age_in_days`
-
 <p align="center">
-  <img src="/assets/fig_6.png" alt="Antigüedad en días de las aplicaciones registradas" />
+  <img src="assets/fig_6.png" alt="fig_6" />
   <br><em>fig_6</em>
 </p>
 
-#### 5. Histograma de `no_voyages_started`
-
 <p align="center">
-  <img src="/assets/fig_7.png" alt="Cantidad de Voyages iniciados por cada usuario" />
+  <img src="assets/fig_7.png" alt="fig_7" />
   <br><em>fig_7</em>
 </p>
 
----
-
-### 📤 Salidas Generadas
-
-- Conteo de participantes por rol, género y país
-- Análisis de fuentes de tráfico (Google, YouTube, LinkedIn, etc.)
-- Visualización del número de aplicaciones por año/mes/semana
-- Exportación de datos limpios para uso posterior en modelos predictivos
-
-
-## Transaction_EDA.ipynb
-
-### 🎯 Objetivo
-Este notebook tiene como propósito analizar los datos de transacciones de la plataforma Chingu.io. Busca entender los patrones de ingresos, fuentes de pago y comportamientos temporales en las contribuciones recibidas.
-
----
-
-### 🧰 Metodología Aplicada
-
-#### Preprocesamiento
-- Limpieza de datos nulos y valores inválidos
-- Eliminación de registros sin fecha
-- Estandarización de nombres de columnas
-
-#### Estadísticas Descriptivas
-- Cálculo de promedios, medianas, desviaciones estándar, mínimos y máximos
-- Recuento de valores para campos categóricos como estado de suscripción, producto y fuente de pago
+<p align="center">
+  <img src="assets/fig_8.png" alt="fig_8" />
+  <br><em>fig_8</em>
+</p>
 
 <p align="center">
-  <img src="/assets/fig_10.png" alt="Distribución de estado de suscripción: active, no-subscription y ended" />
+  <img src="assets/fig_9.png" alt="fig_9" />
+  <br><em>fig_9</em>
+</p>
+
+
+
+* Métodos Matemáticos Aplicados
+ 
+  * Estadísticas básicas: media, mediana, desviación estándar, conteos
+
+  * Análisis de variables categóricas mediante frecuencias relativas
+
+  * Conversión temporal para agrupar por semanas y meses
+
+  * Evaluación de participación (0 o 1) como variable binaria
+
+##### Salidas Generadas
+* Conteo de participantes por rol, género y país
+
+* Análisis de fuentes de tráfico (Google, YouTube, LinkedIn, etc.)
+
+* Visualización del número de aplicaciones por año/mes/semana
+
+* Exportación de datos limpios para uso posterior en modelos predictivos
+
+#### Transaction_EDA.ipynb
+##### Objetivo:
+Este notebook tiene como propósito analizar los datos de transacciones de la plataforma Chingu.io. Busca entender los patrones de ingresos, fuentes de pago y comportamientos temporales en las contribuciones recibidas.
+
+##### Metodología Aplicada:
+* Preprocesamiento:
+
+  * Limpieza de datos nulos y valores inválidos
+
+  * Eliminación de registros sin fecha
+
+  * Estandarización de nombres de columnas
+
+* Estadísticas Descriptivas:
+
+  * Cálculo de promedios, medianas, desviaciones estándar, mínimos y máximos
+
+  * Recuento de valores para campos categóricos como estado de suscripción, producto, fuente de pago
+
+* Análisis de Distribución:
+
+  * Exploración de columnas clave usando histogramas y gráficos de barras
+
+  * Análisis por año, mes y semana de transacción
+    
+<p align="center">
+  <img src="assets/fig_10.png" alt="fig_10" />
   <br><em>fig_10</em>
 </p>
 
 <p align="center">
-  <img src="/assets/fig_11.png" alt="Distribución de fuentes de pago: Discord, Stripe, Buy Me a Coffee, etc." />
+  <img src="assets/fig_11.png" alt="fig_11" />
   <br><em>fig_11</em>
 </p>
 
 <p align="center">
-  <img src="/assets/fig_12.png" alt="Distribución de productos comprados en la plataforma (suscripciones, donaciones, certificados, etc.)" />
+  <img src="assets/fig_12.png" alt="fig_12" />
   <br><em>fig_12</em>
 </p>
 
 <p align="center">
-  <img src="/assets/fig_13.png" alt="Distribución de certificados por Voyage (V47, V48, etc.) o sin certificado" />
+  <img src="assets/fig_13.png" alt="fig_13" />
   <br><em>fig_13</em>
 </p>
 
 <p align="center">
-  <img src="/assets/fig_14.png" alt="Histograma de comisiones por transacción (transaction_fee)" />
+  <img src="assets/fig_14.png" alt="fig_14" />
   <br><em>fig_14</em>
 </p>
 
----
 
-### 📊 Análisis de Distribución
-- Exploración de columnas clave usando histogramas y gráficos de barras
-- Análisis por año, mes y semana de transacción
+* Descomposición Estacional:
 
----
+  * Aplicación de técnicas estadísticas para descubrir patrones estacionales en los ingresos y comisiones
 
-### 📉 Descomposición Estacional
-- Aplicación de técnicas estadísticas para descubrir patrones estacionales en los ingresos y comisiones
+##### Técnicas Matemáticas Aplicadas:
+* Estadística básica: media, mediana, percentiles, etc.
 
----
+* Agrupación por tiempo: año, mes, semana
 
-### 🧮 Técnicas Matemáticas Aplicadas
-- Estadística básica: media, mediana, percentiles, etc.
-- Agrupación por tiempo: año, mes, semana
-- Descomposición estacional de series temporales (`seasonal_decomposition`)
-- Clasificación por frecuencia de ocurrencia
+* Descomposición estacional de series temporales (seasonal_decomposition)
 
----
+* Clasificación por frecuencia de ocurrencia
 
-### 📤 Resultados Obtenidos
-- Distribución de fuentes de ingresos
-- Participación por tipo de producto (donaciones, suscripciones, certificados)
-- Fluctuaciones mensuales y semanales en los ingresos
-- Dataset limpio listo para modelos predictivos o dashboards
+##### Resultados Obtenidos:
+* Distribución de fuentes de ingresos
 
+* Participación por tipo de producto (donaciones, suscripciones, certificados)
 
-## completion_EDA.ipynb
+* Fluctuaciones mensuales y semanales en los ingresos
 
-### 🎯 Objetivo
+* Dataset limpio listo para modelos predictivos o dashboards
+
+#### completion_EDA.ipynb 
+##### Objetivo:
 El propósito de este notebook es analizar los datos relacionados con la finalización de proyectos en el programa Voyage de Chingu. Se estudian variables como el estado de finalización, emisión de certificados, satisfacción del usuario y su relación con niveles (Tier) y roles.
 
----
+##### Metodología aplicada:
+* Preprocesamiento
 
-### 🧰 Metodología Aplicada
+  * Eliminación de columnas textuales y comentarios irrelevantes
 
-#### Preprocesamiento
-- Eliminación de columnas textuales y comentarios irrelevantes
-- Normalización de nombres de columnas
-- Eliminación de filas sin número de Voyage
+  * Normalización de nombres de columnas
 
-#### Tratamiento de Campos Clave
-- Limpieza de columnas `completion_status`, `product`, `tier`, etc.
-- Imputación de valores nulos con etiquetas como `"undefined"` o `"no_product"`
-- Conversión de fechas y manejo de formatos
+  * Eliminación de filas sin número de Voyage
 
----
+* Tratamiento de campos clave
 
-### 📊 Análisis Descriptivo
-- Conteo total de registros: **2968**
-- Satisfacción promedio del usuario: **9.26 / 10**
-- Certificados emitidos: **1223**
-- Clasificación por rol, nivel (Tier) y tipo de producto
+  * Limpieza de columnas completion_status, product, tier, etc.
 
+  * Imputación de valores nulos con etiquetas como "undefined" o "no_product"
+
+  * Conversión de fechas y manejo de formatos
+
+* Análisis Descriptivo
+
+  * Conteo total de registros: 2968
+
+  * Satisfacción promedio del usuario: 9.26 / 10
+
+  * Certificados emitidos: 1223
+
+  * Clasificación por rol, tier y producto
+
+###### Técnicas Matemáticas Aplicadas
+* Estadísticas básicas: media, mediana, desviación estándar
+
+* Frecuencias de variables categóricas
+
+* Análisis de puntuación en escalas (de 0 a 10)
+
+* Procesamiento de fechas para posibles análisis temporales
 <p align="center">
-  <img src="/assets/fig_15.png" alt="Distribución de finalización de los proyectos (Yes, No, undefined, TBD)" />
+  <img src="assets/fig_15.png" alt="fig_15" />
   <br><em>fig_15</em>
 </p>
 
 <p align="center">
-  <img src="/assets/fig_16.png" alt="Distribución de productos asociados a los usuarios que completaron el Voyage" />
+  <img src="assets/fig_16.png" alt="fig_16" />
   <br><em>fig_16</em>
 </p>
 
 <p align="center">
-  <img src="/assets/fig_17.png" alt="Histograma de satisfacción del usuario (escala de 0 a 10)" />
+  <img src="assets/fig_17.png" alt="fig_17" />
   <br><em>fig_17</em>
 </p>
 
----
+###### Resultados
+* Exportación de dataset limpio en CSV
 
-### 🧮 Técnicas Matemáticas Aplicadas
-- Estadísticas básicas: media, mediana, desviación estándar
-- Frecuencias de variables categóricas
-- Análisis de puntuación en escalas (de 0 a 10)
-- Procesamiento de fechas para análisis temporales
+* Análisis de estados: Completed, Incomplete, Dropped, etc.
 
----
+* Evaluación de satisfacción del usuario
 
-### 📤 Resultados
-- Exportación de dataset limpio en CSV
-- Análisis de estados: `Completed`, `Incomplete`, `Dropped`, etc.
-- Evaluación de satisfacción del usuario
-- Asociación entre niveles (Tier) y finalización
+* Asociación entre niveles (Tier) y finalización
 
-## Análisis de Transacciones – `transactions.ipynb`
+##### transactions.ipynb
+###### Objetivo del Proyecto:
+Analizar los datos de transacciones financieras de los usuarios de Chingu.io para comprender patrones de comportamiento, segmentar clientes y predecir su disposición a pagar montos más altos.
 
-### Objetivo del Proyecto
+###### Metodología Aplicada:
+* Preprocesamiento de Datos
 
-Analizar los datos de transacciones realizadas por usuarios de Chingu.io para:
+  * Limpieza de valores nulos y erróneos
 
-- Detectar patrones de comportamiento de compra.
-- Segmentar usuarios en grupos basados en sus hábitos financieros.
-- Predecir su disposición a pagar montos más altos.
+  * Normalización de columnas categóricas
 
----
+  * Conversión de fechas y extracción de variables temporales
 
-### Metodología Aplicada
+* Análisis Descriptivo
 
-#### 1. Preprocesamiento de Datos
+  * Estadísticas básicas por producto, año y estado de suscripción
 
-- Limpieza de valores nulos y erróneos.
-- Normalización de columnas categóricas.
-- Conversión de fechas y extracción de variables temporales.
+  * Distribución de montos de pago
 
-#### 2. Análisis Descriptivo
+  * Análisis de frecuencia temporal
 
-##### Frecuencia diaria de transacciones
+* Visualización
 
-Crecimiento progresivo de actividad desde 2023 hasta inicios de 2025.
+  * Histogramas y boxplots
 
+  * Series de tiempo (diarias, mensuales, anuales)
+
+  * Matriz de correlación
+
+ * Curvas ROC
+
+* Segmentación de Usuarios (Clustering con K-Means)
+
+  * Agrupación de usuarios en 3 clústeres
+
+  * Comparación por gasto total, estado de suscripción y tipo de producto
+
+* Modelado Predictivo
+
+  * Clasificación binaria con regresión logística para predecir pagos altos
+
+  * Evaluación del modelo con métricas: Accuracy, Precision, Recall, F1, AUC
+ 
 <p align="center">
-  <img src="assets/fig_18.png" alt="Frecuencia diaria de transacciones" />
+  <img src="assets/fig_18.png" alt="fig_18" />
   <br><em>fig_18</em>
 </p>
 
-##### Frecuencia mensual de transacciones
-
-Tendencia clara de aumento sostenido desde finales de 2023.
-
 <p align="center">
-  <img src="assets/fig_19.png" alt="Frecuencia mensual de transacciones" />
+  <img src="assets/fig_19.png" alt="fig_19" />
   <br><em>fig_19</em>
 </p>
 
-##### Frecuencia anual de transacciones
-
-2024 lidera ampliamente en volumen total de transacciones.
-
 <p align="center">
-  <img src="assets/fig_20.png" alt="Frecuencia anual de transacciones" />
+  <img src="assets/fig_20.png" alt="fig_20" />
   <br><em>fig_20</em>
 </p>
 
-##### Distribución de montos de pago
-
-Distribución multimodal. El grupo principal está entre $2.5 y $2.7.
-
 <p align="center">
-  <img src="assets/fig_21.png" alt="Distribución de montos de pago" />
+  <img src="assets/fig_21.png" alt="fig_21" />
   <br><em>fig_21</em>
 </p>
 
-##### Gasto total por producto
-
-El mayor ingreso proviene de la suscripción Junior Professional.
-
 <p align="center">
-  <img src="assets/fig_22.png" alt="Gasto total por producto" />
+  <img src="assets/fig_22.png" alt="fig_22" />
   <br><em>fig_22</em>
 </p>
 
----
-
-### Modelado Predictivo
-
-Se entrenó un modelo de regresión logística para predecir si un usuario realizará un pago alto.
-
-##### Interpolación: comparación de pago neto real vs predicho
-
 <p align="center">
-  <img src="assets/fig_23.png" alt="Interpolación de pago neto" />
+  <img src="assets/fig_23.png" alt="fig_23" />
   <br><em>fig_23</em>
 </p>
 
-##### Extrapolación: predicción más allá del rango observado
-
 <p align="center">
-  <img src="assets/fig_24.png" alt="Extrapolación de pago neto" />
+  <img src="assets/fig_24.png" alt="fig_24" />
   <br><em>fig_24</em>
 </p>
 
-Evaluación del Modelo:
-- Precisión: 99%
-- AUC: 0.97
-- MSE: 0.03
-- R²: 0.90
+###### Técnicas Matemáticas y de Machine Learning
+* Estadísticas descriptivas
 
----
+* K-Means Clustering
 
-### Segmentación de Usuarios
+* Regresión Logística
 
-Mediante K-Means Clustering, se agruparon usuarios en 3 clústeres diferenciados por:
+* Binary Encoding
 
-- Nivel de gasto.
-- Estado de suscripción.
-- Tipo de producto adquirido.
+* Imputación y normalización
 
----
+* Curvas ROC & AUC
 
-### Resultados Clave
+###### Resultados Clave
+* Promedio de pago: $3.27
 
-- Pago promedio: $3.27 USD
-- Los usuarios con suscripciones activas y productos profesionales generan más ingresos.
-- El modelo predictivo muestra excelente rendimiento.
-- Hay una clara evolución de crecimiento en la actividad financiera durante 2024.
+* Los usuarios con suscripción activa y productos profesionales aportan más ingresos
 
-### application_completion.ipynb
+* Métricas de modelo predictivo:
 
-#### Objetivo:
+* Precisión del 99%
+
+* AUC hasta 0.97
+
+##### application_completion.ipynb
+###### Objetivo:
 El objetivo de este archivo es predecir si un usuario completará su proyecto Voyage utilizando datos de aplicaciones, participación y retroalimentación.
 
-#### Metodología aplicada
-* **Preprocesamiento**
-  - Fusión de datos de aplicaciones y finalización
-  - Relleno de valores nulos
-  - Codificación categórica con BinaryEncoder
-  - Escalado con StandardScaler
-  - Reducción de Dimensionalidad
-    - Aplicación de PCA para conservar el 95% de la varianza con 59 componentes
-    - Identificación de los 10 atributos más influyentes
-  - Selección de características con Linear SVC
-  - Eliminación de atributos irrelevantes mediante penalización L1
+###### Metodología aplicada
+* Preprocesamiento
 
-* **Entrenamiento de Modelos**
-  - Regresión Logística
-  - Random Forest
-  - Optimización de hiperparámetros con GridSearchCV
-  - Separación de datos para validación y extrapolación
+  * Fusión de datos de aplicaciones y finalización
 
-* **Evaluación del modelo**
-  - Métricas usadas:
-    - Matriz de confusión
-    - Curva ROC
-    - AUC
-    - F1 Score
+  * Relleno de valores nulos
 
-##### ROC Curvas
+  * Codificación categórica con BinaryEncoder
 
+  * Escalado con StandardScaler
+
+  * Reducción de Dimensionalidad
+
+  * Aplicación de PCA para conservar el 95% de la varianza con 59 componentes
+
+  * Identificación de los 10 atributos más influyentes
+
+  * Selección de características con Linear SVC
+
+  * Eliminación de atributos irrelevantes mediante penalización L1
+
+* Entrenamiento de Modelos
+
+  * Regresión Logística
+
+  * Random Forest
+
+  * Optimización de hiperparámetros con GridSearchCV
+
+  * Separación de datos para validación y extrapolación
+
+* Evaluación del modelo
+
+  * Métricas usadas:
+
+    * Matriz de confusión
+
+    * Curva ROC
+
+    * AUC
+
+    * F1 Score
+
+###### Métodos matemáticos utilizados:
+* PCA
+
+* Codificación binaria y Label Encoding
+
+* Modelos de clasificación: Logistic Regression y Random Forest
+
+* Grid Search CV para optimización
+
+* Evaluación con AUC, ROC, F1 Score
+
+###### Resultados principales
+```
+Modelo	 F1 Score	AUC
+Logistic Regression	0.9063	0.9571
+Random Forest	0.9737	0.9977
+Logistic (Extra)	—	0.9681
+Random Forest (Extra)	—	0.9982
+```
+#### voyage_completion 
 <p align="center">
-  <img src="assets/fig_25.png" alt="ROC Curve - Logistic Regression" />
-  <br><em>ROC Curve - Logistic Regression</em>
+  <img src="assets/fig_25.png" alt="fig_25" />
+  <br><em>fig_25</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_27.png" alt="ROC Curve - Logistic Regression (Extra)" />
-  <br><em>ROC Curve - Logistic Regression (Extra)</em>
+  <img src="assets/fig_26.png" alt="fig_26" />
+  <br><em>fig_26</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_28.png" alt="ROC Curve - Random Forest" />
-  <br><em>ROC Curve - Random Forest</em>
+  <img src="assets/fig_27.png" alt="fig_27" />
+  <br><em>fig_27</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_31.png" alt="ROC Curve - Random Forest (Extra)" />
-  <br><em>ROC Curve - Random Forest (Extra)</em>
-</p>
-
-##### Matrices de Confusión
-
-<p align="center">
-  <img src="assets/fig_26.png" alt="Confusion Matrix - Logistic Regression (Extra)" />
-  <br><em>Confusion Matrix - Logistic Regression (Extra)</em>
+  <img src="assets/fig_28.png" alt="fig_28" />
+  <br><em>fig_28</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_30.png" alt="Confusion Matrix - Random Forest (Extra)" />
-  <br><em>Confusion Matrix - Random Forest (Extra)</em>
+  <img src="assets/fig_29.png" alt="fig_29" />
+  <br><em>fig_29</em>
 </p>
 
-#### Métodos matemáticos utilizados:
-- PCA
-- Codificación binaria y Label Encoding
-- Modelos de clasificación: Logistic Regression y Random Forest
-- Grid Search CV para optimización
-- Evaluación con AUC, ROC, F1 Score
+<p align="center">
+  <img src="assets/fig_30.png" alt="fig_30" />
+  <br><em>fig_30</em>
+</p>
 
-#### Resultados principales
+<p align="center">
+  <img src="assets/fig_31.png" alt="fig_31" />
+  <br><em>fig_31</em>
+</p>
 
-| Modelo                   | F1 Score | AUC    |
-|--------------------------|----------|--------|
-| Logistic Regression      | 0.9063   | 0.9571 |
-| Random Forest            | 0.9737   | 0.9977 |
-| Logistic (Extra)         | —        | 0.9681 |
-| Random Forest (Extra)    | —        | 0.9982 |
+##### Análisis enriquecido del archivo application_voyage_list_merge.ipynb (Español)
+###### Objetivo:
+Predecir la participación de usuarios en futuros Voyages de Chingu.io a partir de datos de aplicación, con visualización de tendencias, reducción de dimensiones, y modelos predictivos de alta precisión.
 
-##  Análisis Enriquecido del Proyecto `application_voyage_list_merge.ipynb`
 
-###  Objetivo
-Predecir la participación de usuarios en futuros Voyages de Chingu.io a partir de datos de aplicación, transacciones y finalización de proyectos, utilizando visualización, reducción de dimensiones y modelos de aprendizaje automático.
 
----
+###### Datos de entrada:
+* Número total de aplicaciones: 10,600
 
-## 1.  Análisis Exploratorio
+* Variable objetivo: has_voyage (0 o 1)
 
-- **Días de mayor aplicación**: lunes y martes  
-- **Roles más comunes**: Developer, Product Owner, Scrum Master  
-- **Objetivos frecuentes**: mejorar CV, encontrar equipo, experiencia colaborativa
-
+* Variables clave: rol, objetivo, género, origen, estado de suscripción
 <p align="center">
   <img src="assets/fig_32.png" alt="fig_32" />
+  <br><em>fig_32</em>
 </p>
 
 <p align="center">
   <img src="assets/fig_33.png" alt="fig_33" />
+  <br><em>fig_33</em>
 </p>
-
----
-
-## 2.  Tendencias Temporales
-
-- Pico de aplicaciones: años **2021 y 2022**
-- Aumento de roles técnicos
-- Mayor participación en Voyages entre **julio y noviembre**
 
 <p align="center">
   <img src="assets/fig_34.png" alt="fig_34" />
+  <br><em>fig_34</em>
 </p>
 
 <p align="center">
   <img src="assets/fig_35.png" alt="fig_35" />
+  <br><em>fig_35</em>
 </p>
 
 <p align="center">
   <img src="assets/fig_36.png" alt="fig_36" />
+  <br><em>fig_36</em>
 </p>
 
 <p align="center">
   <img src="assets/fig_37.png" alt="fig_37" />
+  <br><em>fig_37</em>
 </p>
 
 <p align="center">
   <img src="assets/fig_38.png" alt="fig_38" />
+  <br><em>fig_38</em>
 </p>
 
----
+###### Análisis exploratorio:
+* Día más activo: lunes y martes
 
-## 3.  Modelado Predictivo: `has_voyage`
+* Roles más comunes: Developer, Product Owner, Scrum Master
 
-Variable objetivo: `has_voyage` (0 o 1)
+* Objetivos frecuentes: encontrar equipo, mejorar CV, práctica colaborativa
 
-**Modelo utilizado**: `Random Forest Classifier`
+###### Tendencias temporales:
+* Pico de aplicaciones: años 2021 y 2022
 
-| Dataset         | Precisión | F1 Score | AUC  |
-|-----------------|-----------|----------|------|
-| Test            | 100%      | 1.00     | 1.00 |
-| Extrapolación   | 100%      | 1.00     | 1.00 |
+* Roles técnicos en aumento
+
+* Mayor cantidad de Voyages activos entre julio y noviembre
+
+###### Modelado predictivo:
+Modelo: Random Forest Classifier (has_voyage)
+
+Evaluación:
+
+| Conjunto           | Precisión | F1 Score | AUC  |
+|--------------------|-----------|----------|------|
+| Entrenamiento/Test | 100%      | 1.00     | 1.00 |
+| Extrapolación      | 100%      | 1.00     | 1.00 |
 
 <p align="center">
   <img src="assets/fig_39.png" alt="fig_39" />
+  <br><em>fig_39</em>
 </p>
 
 <p align="center">
   <img src="assets/fig_40.png" alt="fig_40" />
+  <br><em>fig_40</em>
 </p>
 
 <p align="center">
   <img src="assets/fig_41.png" alt="fig_41" />
+  <br><em>fig_41</em>
 </p>
 
 <p align="center">
   <img src="assets/fig_42.png" alt="fig_42" />
+  <br><em>fig_42</em>
 </p>
+
+###### Reducción de dimensiones (PCA):
+Componentes seleccionados: 24 (cubren 95% de la varianza)
+
+Variables más influyentes:
+
+país de origen
+
+fuente de adquisición
+
+rol, objetivo, estado de suscripción
+
+<p align="center">
+  <img src="assets/fig_43.png" alt="Image 43" />
+  <br><em>fig_43</em>
+</p>
+
+
+
+###### Evaluación del aprendizaje del modelo:
+Error dentro de la muestra (E_in): 0.0000
+
+Error fuera de muestra (E_out): 0.0005
+
+Estimación de PAC bound: ±0.0375
+
+##  Transaction & Application Combined Analysis
+
+Este análisis tiene como objetivo combinar datos de **aplicaciones**, **transacciones** y **finalización de proyectos** para predecir tanto la **suscripción activa de los usuarios** como el **pago neto esperado**.
+
+###  Datos combinados
+- Total de registros únicos: **2,287**
+- Datos fusionados desde:
+  - `applications.csv`
+  - `transactions.csv`
+  - `completions.csv`
 
 ---
 
-## 4.  Reducción de Dimensiones (PCA)
+###  Selección de Características (PCA)
 
-- **Componentes retenidos**: 24 (95% de la varianza)
-- **Variables más influyentes**: país de origen, fuente, rol, objetivo, estado de suscripción
+Se aplicó **Análisis de Componentes Principales (PCA)** a los tres conjuntos de datos para identificar variables más influyentes.
+
+- Principales atributos:
+  - `application_date`, `goal`, `source`, `product`, `tier`, `completion_status`, `net_payment`, `subscription_status`
+    
+<p align="center">
+  <img src="assets/fig_44.png" alt="Image 44" />
+  <br><em>fig_44</em>
+</p>
 
 <p align="center">
-  <img src="assets/fig_43.png" alt="fig_43" />
+  <img src="assets/fig_45.png" alt="Image 45" />
+  <br><em>fig_45</em>
 </p>
+
+<p align="center">
+  <img src="assets/fig_46.png" alt="Image 46" />
+  <br><em>fig_46</em>
+</p>
+
+<p align="center">
+  <img src="assets/fig_47.png" alt="Image 47" />
+  <br><em>fig_47</em>
+</p>
+
+<p align="center">
+  <img src="assets/fig_48.png" alt="Image 48" />
+  <br><em>fig_48</em>
+</p>
+
 
 ---
 
-## 5. 🔗 Datos Combinados: Aplicación + Transacciones
+###  Modelos de Clasificación(subscription_status_Transactions)
 
-- Total de usuarios únicos: **2,287**
-- Archivos: `applications.csv`, `transactions.csv`, `completions.csv`
-
----
-
-## 6.  Selección de Características (PCA Combinado)
-
-<p align="center">
-  <img src="assets/fig_44.png" alt="fig_44" />
-</p>
-
-<p align="center">
-  <img src="assets/fig_45.png" alt="fig_45" />
-</p>
-
-<p align="center">
-  <img src="assets/fig_46.png" alt="fig_46" />
-</p>
-
-<p align="center">
-  <img src="assets/fig_47.png" alt="fig_47" />
-</p>
-
-<p align="center">
-  <img src="assets/fig_48.png" alt="fig_48" />
-</p>
-
----
-
-## 7.  Modelos de Clasificación: `subscription_status`
+Se entrenaron tres modelos para predecir el estado de suscripción (`Activa`, `Terminada`, `Sin suscripción`).
 
 | Modelo                | Accuracy | F1 Score | AUC     |
 |------------------------|----------|----------|---------|
 | Random Forest          | 94.48%   | 0.9431   | 0.9930  |
-| **Gradient Boosting**  | **95.57%** | **0.9551** | **0.9920** |
+| Gradient Boosting      | 95.57%   | 0.9551   | 0.9920  |
 | Logistic Regression    | 86.44%   | 0.8640   | 0.9559  |
 
+>  **Gradient Boosting** presentó el mejor rendimiento general.
+
 <p align="center">
-  <img src="assets/fig_49.png" alt="fig_49" />
+  <img src="assets/fig_49.png" alt="Image 49" />
+  <br><em>fig_49</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_50.png" alt="fig_50" />
+  <img src="assets/fig_50.png" alt="Image 50" />
+  <br><em>fig_50</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_51.png" alt="fig_51" />
+  <img src="assets/fig_51.png" alt="Image 51" />
+  <br><em>fig_51</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_52.png" alt="fig_52" />
+  <img src="assets/fig_52.png" alt="Image 52" />
+  <br><em>fig_52</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_53.png" alt="fig_53" />
+  <img src="assets/fig_53.png" alt="Image 53" />
+  <br><em>fig_53</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_54.png" alt="fig_54" />
+  <img src="assets/fig_54.png" alt="Image 54" />
+  <br><em>fig_54</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_55.png" alt="fig_55" />
+  <img src="assets/fig_55.png" alt="Image 55" />
+  <br><em>fig_55</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_56.png" alt="fig_56" />
+  <img src="assets/fig_56.png" alt="Image 56" />
+  <br><em>fig_56</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_57.png" alt="fig_57" />
+  <img src="assets/fig_57.png" alt="Image 57" />
+  <br><em>fig_57</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_58.png" alt="fig_58" />
+  <img src="assets/fig_58.png" alt="Image 58" />
+  <br><em>fig_58</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_59.png" alt="fig_59" />
+  <img src="assets/fig_59.png" alt="Image 59" />
+  <br><em>fig_59</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_60.png" alt="fig_60" />
+  <img src="assets/fig_60.png" alt="Image 60" />
+  <br><em>fig_60</em>
 </p>
 
 ---
 
-## 8.  Modelado de Regresión: `net_payment`
+###  Modelado de Regresión
 
-**Modelo utilizado**: `Gradient Boosting Regressor`
+Se predijo el valor monetario `net_payment` usando modelos de regresión:
+
+- **Mejor modelo**: Gradient Boosting Regressor
 
 | Métrica       | Test Set | Extrapolación |
 |---------------|----------|---------------|
@@ -806,23 +871,61 @@ Variable objetivo: `has_voyage` (0 o 1)
 | R² Score      | 0.83     | 0.75          |
 
 <p align="center">
-  <img src="assets/fig_61.png" alt="fig_61" />
+  <img src="assets/fig_61.png" alt="Image 61" />
+  <br><em>fig_61</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_62.png" alt="fig_62" />
+  <img src="assets/fig_62.png" alt="Image 62" />
+  <br><em>fig_62</em>
 </p>
 
 ---
 
-##  Archivos Relacionados
+###  Archivos relacionados
 
-- `application_voyage_list_merge.ipynb`: análisis de postulaciones
-- `Transaction_Application_analysis.ipynb`: análisis combinado
-- `merged_dataset.csv`: dataset final para modelado
+- `Transaction_Application_analysis.ipynb`: análisis completo
+- `merged_dataset.csv`: conjunto de datos final usado para modelado
 
+##  Application_table_normalization.ipynb
+
+Este módulo realiza la **normalización de columnas clave** del dataset de aplicaciones para reducir redundancias, mejorar la estructura y preparar los datos para análisis avanzados y modelado predictivo.
+
+###  Proceso de Normalización
+
+Se utilizó una clase personalizada `Application_Normalizer` para:
+
+1. Leer los datos originales desde `applications.csv`
+2. Crear tablas de dimensión para los siguientes campos:
+   - `unique_id`
+   - `subscription_status`
+   - `voyage_role`
+   - `gender`
+   - `goal`
+   - `source`
+   - `country_name_from_country`
+   - `application_day_of_week`
+3. Reemplazar los valores originales por claves foráneas (IDs)
+4. Exportar tanto la versión normalizada como la versión reconstruida
+
+### Archivos Generados
+
+| Archivo                                | Descripción                                          |
+|----------------------------------------|------------------------------------------------------|
+| `clean_applications.csv`              | Aplicaciones con claves foráneas (formato limpio)   |
+| `*_table.csv`                         | Tablas de dimensión por columna (ej. `goal_table.csv`) |
+| `merged_applications.csv`             | Aplicaciones reconstruidas con los valores originales |
+
+>  Todos los archivos se encuentran en: `./data/normalized_data/`
+
+###  Ventajas
+
+- Menor redundancia de texto
+- Mejor organización de datos
+- Listo para bases de datos relacionales o entrenamiento de modelos ML
 
 ## application_completion-auto_regressive_model
+Modelado Autoregresivo para Completitud de Voyage
 
 Este módulo implementa un modelo autoregresivo basado en LSTM para predecir si un usuario completará su participación en un Voyage de Chingu.io, usando datos secuenciales históricos y enriquecimiento externo como tasa de desempleo y tendencias de búsqueda de Google.
 
@@ -842,19 +945,19 @@ Este módulo implementa un modelo autoregresivo basado en LSTM para predecir si 
 
 Se construyeron dos modelos:
 
-#### 1. Predicción de `completed_voyage`
-
+#### 1. **Predicción de `completed_voyage`**
 - Datos secuenciales por `unique_id` y `timestamp`
 - Modelo: `LSTMClassifier` (PyTorch)
-- Exactitud de prueba: **99.38%**
-
+- Exactitud de prueba (`Test Accuracy`): **99.38%**
+- Visualización de predicciones secuenciales por usuario
+- Manejo robusto de secuencias de longitud variable
+  
 <p align="center">
-  <img src="assets/fig_63.png" alt="fig_63" />
-  <br><em>fig_63 - Secuencia de predicción para completed_voyage</em>
+  <img src="assets/fig_63.png" alt="Image 63" />
+  <br><em>fig_63</em>
 </p>
 
-#### 2. Predicción de `has_valid_voyage`
-
+#### 2. **Predicción de `has_valid_voyage`**
 - Modelo similar con secuencias por `application_date`
 - Exactitud en prueba: **99.88%**
 
@@ -864,63 +967,53 @@ Se construyeron dos modelos:
 
 Se utilizaron modelos Prophet para pronosticar:
 
-#### 1. Completitud de Voyage mensual
-
+#### 1. **Completitud de Voyage mensual**
 - Entrenado con datos de completitud mensual desde 2021
-- Proyección de próximos 12 meses
+- Proyección de próximos **12 meses**
+- Gráficos de tendencias, estacionalidad anual y efecto de días festivos
 
+#### 2. **Envíos de Aplicaciones**
+- Pronóstico diario basado en fechas de aplicación
+- Gráfica de predicción vs. Tasa de desempleo (U.S.)
 <p align="center">
-  <img src="assets/fig_64.png" alt="fig_64" />
-  <br><em>fig_64 - Pronóstico de completitud</em>
+  <img src="assets/fig_64.png" alt="Image 64" />
+  <br><em>fig_64</em>
 </p>
-
-#### 2. Envíos de Aplicaciones vs. Desempleo
-
-<p align="center">
-  <img src="assets/fig_65.png" alt="fig_65" />
-  <br><em>fig_65 - Completitud vs Tasa de Desempleo (EE.UU.)</em>
-</p>
-
-<p align="center">
-  <img src="assets/fig_66.png" alt="fig_66" />
-  <br><em>fig_66 - Aplicaciones vs Tasa de Desempleo (EE.UU.)</em>
-</p>
-
 ---
 
 ### Enriquecimiento Externo
 
-Se integraron variables externas para mejorar la capacidad predictiva:
+- Se integró la **tasa de desempleo de EE.UU.** (`UNRATE`) desde FRED
+- Se integraron datos de **Google Trends** para búsquedas de:
+  - `Web Developer Job`
+  - `Scrum Master`
+  - `Product Owner`
 
-- **Tasa de desempleo de EE.UU.** (`UNRATE`)
-- **Tendencias de Google**:
-  - Búsquedas de `Web Developer Job`
-  - Búsquedas de `Scrum Master`
-  - Búsquedas de `Product Owner`
-
+> Comparaciones gráficas muestran correlación entre volumen de aplicaciones y popularidad de roles técnicos en el mercado laboral.
 <p align="center">
-  <img src="assets/fig_67.png" alt="fig_67" />
-  <br><em>fig_67 - Aplicaciones vs Interés en Web Developer</em>
+  <img src="assets/fig_65.png" alt="Image 65" />
+  <br><em>fig_65</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_68.png" alt="fig_68" />
-  <br><em>fig_68 - Aplicaciones vs Interés en Scrum Master</em>
+  <img src="assets/fig_66.png" alt="Image 66" />
+  <br><em>fig_66</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_69.png" alt="fig_69" />
-  <br><em>fig_69 - Aplicaciones vs Interés en Product Owner</em>
+  <img src="assets/fig_67.png" alt="Image 67" />
+  <br><em>fig_67</em>
 </p>
 
----
+<p align="center">
+  <img src="assets/fig_68.png" alt="Image 68" />
+  <br><em>fig_68</em>
+</p>
 
-### Resultados de Modelos LSTM
-
-| Modelo                | Métrica        | Valor     |
-|------------------------|----------------|-----------|
-| LSTM - `completed_voyage` | Accuracy       | 99.38%    |
-| LSTM - `has_valid_voyage` | Accuracy       | 99.88%    |
+<p align="center">
+  <img src="assets/fig_69.png" alt="Image 69" />
+  <br><em>fig_69</em>
+</p>
 
 ---
 
@@ -1162,105 +1255,66 @@ Se configuró un clúster de respaldo distribuido con:
 
 Permite replicación y redundancia de datos clave del proyecto.
 
-## 5. BIGQuery
-
-### Análisis con Google BigQuery
+### 5. BIGQuery
+##  Análisis con Google BigQuery
 
 Se utilizó Google BigQuery como motor de análisis para unir las principales fuentes de datos de la plataforma Chingu (`applications`, `transactions`, `completions`) y ejecutar consultas SQL escalables y eficientes.
 
----
-
-### Objetivos Principales
+###  Objetivos Principales
 
 1. Comprender la distribución de usuarios por estado de suscripción  
 2. Evaluar qué productos generan más ingresos o transacciones  
 3. Calcular la tasa de finalización de proyectos según el rol en el Voyage  
 4. Analizar los niveles de satisfacción a través del NPS (Net Promoter Score)
 
----
-
-### Recuento de usuarios por estado de suscripción
-
 <p align="center">
   <img src="assets/fig_70.png" alt="Image 70" />
-  <br><em>Consulta de unión de tablas</em>
+  <br><em>fig_70</em>
 </p>
 
+* Recuento de usuarios por estado de suscripción
 <p align="center">
   <img src="assets/fig_71.png" alt="Image 71" />
-  <br><em>Distribución de usuarios por estado de suscripción</em>
+  <br><em>fig_71</em>
 </p>
-
----
-
-### Pago neto promedio por producto
 
 <p align="center">
   <img src="assets/fig_72.png" alt="Image 72" />
-  <br><em>Consulta por producto</em>
+  <br><em>fig_72</em>
 </p>
 
+* Pago neto promedio por producto
 <p align="center">
   <img src="assets/fig_73.png" alt="Image 73" />
-  <br><em>Promedio de pago neto y cantidad de transacciones</em>
+  <br><em>fig_73</em>
 </p>
-
-| Producto                           | Pago Promedio (USD) | Cantidad de Transacciones |
-|------------------------------------|----------------------|----------------------------|
-| SUBSCRIPTION - Professional        | 9.02                 | 513                        |
-| DONATION                           | 8.97                 | 1275                       |
-| SUBSCRIPTION - Junior Professional | 2.72                 | 9437                       |
-| PRODUCT - Voyage Certificate       | 2.57                 | 1185                       |
-
----
-
-### Completion Rate por rol en el Voyage
 
 <p align="center">
   <img src="assets/fig_74.png" alt="Image 74" />
-  <br><em>Consulta por rol</em>
+  <br><em>fig_74</em>
 </p>
 
+* Completion Rate by Voyage Role
 <p align="center">
   <img src="assets/fig_75.png" alt="Image 75" />
-  <br><em>Tasa de finalización por rol</em>
+  <br><em>fig_75</em>
 </p>
-
-| Rol              | Completions | Aplicaciones Totales | Completion Rate (%) |
-|------------------|-------------|-----------------------|----------------------|
-| Unknown          | 152         | 631                   | 24.09                |
-| Scrum Master     | 44          | 192                   | 22.92                |
-| Developer        | 1433        | 6514                  | 22.00                |
-| UI/UX Designer   | 73          | 563                   | 12.97                |
-| Product Owner    | 77          | 680                   | 11.32                |
-| Data Scientist   | 29          | 686                   | 4.23                 |
-
----
-
-### Distribución de Net Promoter Score (NPS)
 
 <p align="center">
   <img src="assets/fig_76.png" alt="Image 76" />
-  <br><em>Consulta NPS</em>
+  <br><em>fig_76</em>
+</p>
+
+* Distribución de puntuaciones del NPS
+<p align="center">
+  <img src="assets/fig_77.png" alt="Image 77" />
+  <br><em>fig_77</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_77.png" alt="Image 77" />
-  <br><em>Distribución de NPS</em>
+  <img src="assets/fig_78.png" alt="Image 78" />
+  <br><em>fig_78</em>
 </p>
-
-| NPS Score | Usuarios |
-|-----------|----------|
-| 10        | 8905     |
-| 9         | 1092     |
-| 8         | 628      |
-| 7         | 149      |
-| 6         | 203      |
-| 5         | 49       |
-| 3         | 288      |
-| null      | 1096     |
-
----
 
 ## 6. Dashboard Analítico de Chingu
 
@@ -1287,32 +1341,32 @@ Este dashboard fue diseñado para proporcionar una visión integral y dinámica 
 | **Filtros Interactivos** | Por rol, género, suscripción, producto, país, entre otros |
 
 <p align="center">
-  <img src="assets/fig_79.png" alt="Distribución de aplicaciones por género, objetivo, fuente y fecha" />
+  <img src="assets/fig_79.png" alt="Image 79" />
   <br><em>fig_79</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_80.png" alt="Distribución de certificados emitidos por Voyage y por rol" />
+  <img src="assets/fig_80.png" alt="Image 80" />
   <br><em>fig_80</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_81.png" alt="Versión extendida de certificados emitidos por rol y estado" />
+  <img src="assets/fig_81.png" alt="Image 81" />
   <br><em>fig_81</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_82.png" alt="Evolución del NPS a lo largo del tiempo y promedio por Voyage" />
+  <img src="assets/fig_82.png" alt="Image 82" />
   <br><em>fig_82</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_83.png" alt="Participantes por Voyage, tasa de finalización y emisión de certificados por año" />
+  <img src="assets/fig_83.png" alt="Image 83" />
   <br><em>fig_83</em>
 </p>
 
 <p align="center">
-  <img src="assets/fig_84.png" alt="Embudo del recorrido del usuario por país" />
+  <img src="assets/fig_84.png" alt="Image 84" />
   <br><em>fig_84</em>
 </p>
 
@@ -1324,29 +1378,30 @@ Este dashboard fue diseñado para proporcionar una visión integral y dinámica 
 - Toma de decisiones basada en datos para crecimiento de la plataforma
 
 
-## 7. Minería de Datos con Orange
 
-## Análisis con Orange Data Mining
+### 7. Minería de Datos con Orange
+
+##  Análisis con Orange Data Mining
 
 Se utilizaron flujos de trabajo en **Orange Data Mining** para realizar análisis exploratorios, aprendizaje automático y evaluación de modelos de manera visual e interactiva.
 
 ---
 
-### Carga y Preprocesamiento de Datos
+###  Carga y Preprocesamiento de Datos
 
 - **File / Data Table**: Lectura del archivo CSV y visualización inicial de los datos.
 - **Preprocess**: Limpieza y transformación de datos incluyendo manejo de valores faltantes, normalización, codificación categórica y discretización.
 
 ---
 
-### Visualización de Datos
+###  Visualización de Datos
 
 - **Heat Map**, **Bar Plot**, **Violin Plot**, **Scatter Plot**, **Line Plot**: Se aplicaron para identificar relaciones, correlaciones y distribución de variables clave.
 - **Feature Statistics**: Análisis estadístico básico por atributo.
 
 ---
 
-### Análisis Predictivo
+###  Análisis Predictivo
 
 #### Clasificación
 
@@ -1372,20 +1427,20 @@ Se utilizaron flujos de trabajo en **Orange Data Mining** para realizar análisi
 
 ---
 
-### Resultados Clave
+###  Resultados Clave
 
 - Se identificaron modelos con alta precisión en la predicción de comportamiento de usuarios (ej. regresión logística con alta AUC).
 - Visualizaciones revelaron correlaciones entre atributos como rol, país y resultados de finalización.
 - El uso de Orange permitió una exploración rápida y visual sin necesidad de codificación manual.
 
 ---
-
 <p align="center">
-  <img src="assets/fig_85.png" alt="Flujo de trabajo en Orange: carga de datos, visualización, clustering y clasificación" />
+  <img src="assets/fig_85.png" alt="Image 85" />
   <br><em>fig_85</em>
 </p>
 
-##  Herramientas Utilizadas
+**
+###  Herramientas Utilizadas
 
 - Orange Data Mining 3.x
 - Widgets: File, Preprocess, Tree, kNN, Logistic Regression, PCA, Test and Score, Confusion Matrix, ROC, Rank, Scatter Plot, etc.
@@ -1394,7 +1449,7 @@ Se utilizaron flujos de trabajo en **Orange Data Mining** para realizar análisi
 
 > Este flujo visual facilitó la validación de hipótesis rápidamente y ayudó a complementar los análisis hechos con Python y BigQuery.
 
-## 8. Infraestructura Docker para Procesamiento de Datos
+### 8. Infraestructura Docker para Procesamiento de Datos
 
 Se utilizó Docker para desplegar una arquitectura distribuida basada en contenedores, facilitando el análisis y almacenamiento de datos en gran escala.
 
